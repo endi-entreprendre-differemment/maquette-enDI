@@ -98,58 +98,6 @@ div.layout.third > div:last-child {
   div.layout.third > div:first-child,
   div.layout.third > div:last-child {
     width: 100%; } }
-body.login .layout {
-  height: 100vh; }
-body.login .login_form {
-  box-shadow: 0 0 10px gray;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 50px;
-  z-index: 10; }
-  body.login .login_form .endi_logo {
-    flex: 1 0 auto; }
-  body.login .login_form form {
-    flex: 3 0 auto; }
-    body.login .login_form form > div {
-      padding-bottom: 30px; }
-    body.login .login_form form input[type="text"],
-    body.login .login_form form input[type="password"] {
-      width: 100%; }
-  body.login .login_form .login_footer {
-    align-items: flex-end;
-    display: flex;
-    font-size: 12px;
-    font-size: .75rem;
-    justify-content: space-between;
-    flex: 0 0 auto; }
-    body.login .login_form .login_footer p:last-child {
-      text-align: right; }
-body.login .atwork_photo {
-  background-color: gray;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; }
-  body.login .atwork_photo > p {
-    background: rgba(255, 255, 255, 0.5);
-    bottom: 10px;
-    font-size: 14px;
-    font-size: .875rem;
-    padding: 5px 10px;
-    position: absolute;
-    right: 10px;
-    text-align: right;
-    text-shadow: 0 0 1px white; }
-
-@media (max-width: 800px) {
-  body.login .layout {
-    height: auto;
-    min-height: 100vh; }
-  body.login .login_form form {
-    flex: 1 0 auto; }
-  body.login .atwork_photo {
-    min-height: 50vh; } }
 @font-face {
   font-family: 'Chivo';
   src: url("../resources/fonts/chivo-light-webfont.eot");
@@ -205,6 +153,83 @@ button {
   color: black;
   font-family: 'Chivo', sans-serif; }
 
+body.login .layout {
+  height: 100vh; }
+body.login .login_form {
+  box-shadow: 0 0 10px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  z-index: 10; }
+  body.login .login_form .endi_logo {
+    flex: 1 0 auto; }
+  body.login .login_form form {
+    flex: 3 0 auto; }
+    body.login .login_form form > div {
+      padding-bottom: 30px; }
+    body.login .login_form form input[type="text"],
+    body.login .login_form form input[type="password"] {
+      width: 100%; }
+  body.login .login_form .login_footer {
+    align-items: flex-end;
+    display: flex;
+    font-size: 12px;
+    font-size: .75rem;
+    justify-content: space-between;
+    flex: 0 0 auto; }
+    body.login .login_form .login_footer p:first-child {
+      margin-right: 5px; }
+    body.login .login_form .login_footer p:last-child {
+      margin-left: 5px;
+      text-align: right; }
+    body.login .login_form .login_footer a {
+      text-decoration: none; }
+    body.login .login_form .login_footer a:hover,
+    body.login .login_form .login_footer a:focus,
+    body.login .login_form .login_footer a:active {
+      text-decoration: underline; }
+body.login .atwork_photo {
+  background-color: gray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  body.login .atwork_photo > p {
+    background: rgba(255, 255, 255, 0.5);
+    bottom: 10px;
+    font-size: 12px;
+    font-size: .75rem;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
+    text-align: right;
+    text-shadow: 0 0 1px white;
+    max-width: calc( 100% - 20px ); }
+
+@media (max-width: 500px) {
+  body.login .login_form {
+    padding: 20px; }
+    body.login .login_form form {
+      padding-top: 40px; } }
+@media (min-width: 501px) and (max-width: 800px) {
+  body.login .endi_logo {
+    left: 50px;
+    position: absolute;
+    top: 50px; }
+  body.login .login_form form,
+  body.login .login_form .login_footer {
+    margin-left: 178px; }
+  body.login .login_form .login_footer {
+    padding-top: 20px; } }
+@media (max-width: 800px) {
+  body.login .layout {
+    height: auto;
+    min-height: 100vh; }
+  body.login .login_form form {
+    flex: 1 0 auto; }
+  body.login .atwork_photo {
+    min-height: 50vh; } }
 body {
   background: white; }
 

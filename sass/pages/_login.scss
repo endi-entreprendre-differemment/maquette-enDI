@@ -29,8 +29,20 @@ body.login {
 			font-size: .75rem;
 			justify-content: space-between;
 			flex: 0 0 auto;
+			p:first-child {
+				margin-right: 5px;
+			}
 			p:last-child {
+				margin-left: 5px;
 				text-align: right;
+			}
+			a {
+				text-decoration: none;
+			}
+			a:hover,
+			a:focus,
+			a:active {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -43,13 +55,48 @@ body.login {
 		> p {
 			background: $midFadedWhite;
 			bottom: 10px;
-			font-size: 14px;
-			font-size: .875rem;
+			font-size: 12px;
+			font-size: .75rem;
 			padding: 5px 10px;
 			position: absolute;
 			right: 10px;
-			text-align: right;	
-			text-shadow: 0 0 1px $white;		
+			text-align: right;
+			text-shadow: 0 0 1px $white;
+			max-width: calc( 100% - 20px );
+// 			transition: all .5s ease-out;
+// 			&:hover,
+// 			&:focus {
+// 				transform: scale(1.2);
+// 				transform-origin: bottom right;
+// 			}
+		}
+	}
+}
+@media (max-width: 500px) {
+	body.login {
+		.login_form {
+			padding: 20px;
+			form {
+				padding-top: 40px;
+			}
+		}
+	}
+}
+@media (min-width: 501px) and (max-width: 800px) {
+	body.login {
+		.endi_logo {
+			left: 50px;
+			position: absolute;
+			top: 50px;
+		}
+		.login_form {
+			form,
+			.login_footer {
+				margin-left: 178px;
+			}
+			.login_footer {
+				padding-top: 20px;
+			}
 		}
 	}
 }

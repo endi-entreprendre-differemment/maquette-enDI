@@ -1,10 +1,11 @@
 @import 'reset';
 @import 'variables';
 
-@import 'styles/form';
-@import 'styles/layout';
-@import 'styles/login';
-@import 'styles/typo';
+@import 'generic/form';
+@import 'generic/layout';
+@import 'generic/typo';
+
+@import 'pages/login';
 
 
 body {
