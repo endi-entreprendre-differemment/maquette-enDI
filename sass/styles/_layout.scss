@@ -1,0 +1,26 @@
+div.layout {
+	&.flex {
+		display: flex;
+	}
+	&.third {
+		> div:first-child {
+			width: 33.3333%;
+		}
+		> div:last-child {
+			width: 66.6666%;
+		}
+	}
+}
+@media (max-width: 800px) {
+	div.layout {
+		&.flex {
+			flex-wrap: wrap;
+		}
+		&.third {
+			> div:first-child,
+			> div:last-child {
+				width: 100%;
+			}
+		}
+	}
+}

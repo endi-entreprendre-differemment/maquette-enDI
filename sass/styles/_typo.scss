@@ -1,0 +1,90 @@
+// règles typo générales
+
+@font-face {
+  font-family: 'Chivo';
+  src: url('../resources/fonts/chivo-light-webfont.eot');
+  src: url('../resources/fonts/chivo-light-webfont.woff2') format('woff2'),
+       url('../resources/fonts/chivo-light-webfont.woff') format('woff'),
+       url('../resources/fonts/chivo-light-webfont.ttf') format('truetype'),
+       url('../resources/fonts/chivo-light-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chivo';
+  src: url('../resources/fonts/chivo-lightitalic-webfont.eot');
+  src: url('../resources/fonts/chivo-lightitalic-webfont.woff2') format('woff2'),
+       url('../resources/fonts/chivo-lightitalic-webfont.woff') format('woff'),
+       url('../resources/fonts/chivo-lightitalic-webfont.ttf') format('truetype'),
+       url('../resources/fonts/chivo-lightitalic-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Chivo';
+  src: url('../resources/fonts/chivo-regular-webfont.eot');
+  src: url('../resources/fonts/chivo-regular-webfont.woff2') format('woff2'),
+       url('../resources/fonts/chivo-regular-webfont.woff') format('woff'),
+       url('../resources/fonts/chivo-regular-webfont.ttf') format('truetype'),
+       url('../resources/fonts/chivo-regular-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: normal; // 400
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chivo';
+  src: url('../resources/fonts/chivo-italic-webfont.eot');
+  src: url('../resources/fonts/chivo-italic-webfont.woff2') format('woff2'),
+       url('../resources/fonts/chivo-italic-webfont.woff') format('woff'),
+       url('../resources/fonts/chivo-italic-webfont.ttf') format('truetype'),
+       url('../resources/fonts/chivo-italic-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: normal; // 400
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Chivo';
+  src: url('../resources/fonts/chivo-bold-webfont.eot');
+  src: url('../resources/fonts/chivo-bold-webfont.woff2') format('woff2'),
+       url('../resources/fonts/chivo-bold-webfont.woff') format('woff'),
+       url('../resources/fonts/chivo-bold-webfont.ttf') format('truetype'),
+       url('../resources/fonts/chivo-bold-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: bold; // 700
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chivo';
+  src: url('../resources/fonts/chivo-bolditalic-webfont.eot');
+  src: url('../resources/fonts/chivo-bolditalic-webfont.woff2') format('woff2'),
+       url('../resources/fonts/chivo-bolditalic-webfont.woff') format('woff'),
+       url('../resources/fonts/chivo-bolditalic-webfont.ttf') format('truetype'),
+       url('../resources/fonts/chivo-bolditalic-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: bold; // 700
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Chivo';
+  src: url('../resources/fonts/chivo-black-webfont.eot');
+  src: url('../resources/fonts/chivo-black-webfont.woff2') format('woff2'),
+       url('../resources/fonts/chivo-black-webfont.woff') format('woff'),
+       url('../resources/fonts/chivo-black-webfont.ttf') format('truetype'),
+       url('../resources/fonts/chivo-black-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chivo';
+  src: url('../resources/fonts/chivo-blackitalic-webfont.eot');
+  src: url('../resources/fonts/chivo-blackitalic-webfont.woff2') format('woff2'),
+       url('../resources/fonts/chivo-blackitalic-webfont.woff') format('woff'),
+       url('../resources/fonts/chivo-blackitalic-webfont.ttf') format('truetype'),
+       url('../resources/fonts/chivo-blackitalic-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+body,
+input,
+textarea,
+button {
+	color: black;
+	font-family: 'Chivo', sans-serif;
+}

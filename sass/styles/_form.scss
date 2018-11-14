@@ -1,0 +1,59 @@
+form {
+	font-size: 14px;
+	font-size: .875rem;
+	> div {
+		padding-bottom: 10px;
+	}
+}
+label {
+	display: block;
+}
+label[for] {
+	font-weight: bold;
+}
+input[type="text"],
+input[type="password"] {
+	border: $simpleLine solid $white;
+	border-bottom-color: $black;
+	font-size: 14px;
+	font-size: .875rem;
+	padding: 10px 0;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+	box-shadow: 0 1px 0 $midFadedGrey, 0 2px 0 $fadedGrey;
+}
+button {
+	background: $lightGreen;
+	border: 0 none;
+	border-radius: 0;
+	cursor: pointer;
+	font-size: 14px;
+	font-size: .875rem;
+	font-weight: bold;
+	padding: 10px 20px;
+}
+button[aria-disabled='true'],
+button.disabled {
+	background: $grey;
+	cursor: default;
+}
+button:not(.disabled):hover,
+button:not([aria-disabled='true']):hover,
+button:not(.disabled):focus,
+button:not([aria-disabled='true']):focus,
+button:not(.disabled):active,
+button:not([aria-disabled='true']):active {
+	box-shadow: 0 2px 4px $grey;
+}
+button {
+	&::after {
+		display: inline-block;
+		font-size: 20px;
+		font-size: 1.25rem;
+		margin: -10px 0 -10px 5px;
+	}
+	&.next::after {
+		content: "\2192";
+	}
+}

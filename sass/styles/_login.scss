@@ -1,0 +1,71 @@
+body.login {
+	.layout {
+		height: 100vh;
+	}
+	.login_form {
+		box-shadow: 0 0 10px $grey;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 50px;
+		z-index: 10;
+		.endi_logo {
+			flex: 1 0 auto;
+		}
+		form {
+			flex: 3 0 auto;
+			> div {
+				padding-bottom: 30px;
+			}
+			input[type="text"],
+			input[type="password"] {
+				width: 100%;
+			}
+		}
+		.login_footer {
+			align-items: flex-end;
+			display: flex;
+			font-size: 12px;
+			font-size: .75rem;
+			justify-content: space-between;
+			flex: 0 0 auto;
+			p:last-child {
+				text-align: right;
+			}
+		}
+	}
+	.atwork_photo {
+		background-color: $grey;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		> p {
+			background: $midFadedWhite;
+			bottom: 10px;
+			font-size: 14px;
+			font-size: .875rem;
+			padding: 5px 10px;
+			position: absolute;
+			right: 10px;
+			text-align: right;	
+			text-shadow: 0 0 1px $white;		
+		}
+	}
+}
+@media (max-width: 800px) {
+	body.login {
+		.layout {
+			height: auto;
+			min-height: 100vh;
+		}
+		.login_form {
+			form {
+				flex: 1 0 auto;
+			}
+		}
+		.atwork_photo {
+			min-height: 50vh;
+		}
+	}
+}

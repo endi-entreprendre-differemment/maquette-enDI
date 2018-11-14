@@ -1,0 +1,32 @@
+body,
+h1,
+h2,
+h3,
+fieldset,
+legend,
+input,
+ul,
+li,
+p {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style-type: none;
+}
+legend,
+fieldset {
+	border: 0 none;
+}
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}

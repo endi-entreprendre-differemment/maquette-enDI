@@ -1,0 +1,61 @@
+$transparentBg: rgba(0,0,0,0);
+
+// white
+$white: rgb(255,255,255);
+$transWhite: rgba(255,255,255,.8);
+$midFadedWhite: rgba(255,255,255,.5);
+$fadedWhite: rgba(255,255,255,.2);
+
+// black
+$black: rgb(0,0,0);
+
+// grey
+$grey: rgb(128,128,128); // ! on white
+$transGrey: rgba(128,128,128,.8); // not for text
+$midFadedGrey: rgba(128,128,128,.5); // not for text
+$fadedGrey: rgba(128,128,128,.2); // not for text
+
+// green
+$darkGreen: rgb(6,98,67); // ✗ on black
+$midGreen: rgb(6,137,81); // ! on white, funcPositive
+$lightGreen: rgb(29,230,126); // ✗ on white
+
+// red
+$darkRed: rgb(155,0,31); // ✗ on black
+$midRed: rgb(225,20,0); // ! on black, funcNegative
+$lightRed: rgb(255,150,0); // ✗ on white, funcCaution
+
+// blue
+$darkBlue: rgb(0,92,152); // ✗ on black
+$midBlue: rgb(0,122,177); // ! on black, funcNeutral
+$lightBlue: rgb(0,163,203); // ✗ on white
+$greyedBlue: rgb(103,119,126);
+
+// functional
+$funcPositive: rgb(0,137,81); // ! on white
+$funcNegative: rgb(225,20,0); // ! on black
+$funcCaution: rgb(255,150,0); // ✗ on white
+$funcNeutral: rgb(0,122,177); // ! on black
+
+// sizes
+$simpleLine: 1px;
+$doubleLine: 2px;
+$tripleLine: 3px;
+$screenPadding: 8px;
+
+$iconSize: 32px;
+$midIconSize: 24px;
+$smallIconSize: 16px;
+
+// debug
+$check: rgba(255,0,0,.5);
+
+// layers (z-index values)
+$contentLayer: 5;
+$actionLayer: 10;
+$headerLayer: 12;
+$floatingLayer: 20;
+$maskLayer: 30;
+$aboveMaskLayer: 35;
+$popinLayer: 40;
+$abovePopinLayer: 45;
