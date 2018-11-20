@@ -10,7 +10,9 @@ $fadedWhite: rgba(255,255,255,.2);
 $black: rgb(0,0,0);
 
 // grey
-$grey: rgb(128,128,128); // ! on white
+$darkGrey: rgb(117,117,117);
+$midGrey: rgb(128,128,128); // ! on white
+$lightGrey: rgb(176,176,176); // ✗ on white
 $transGrey: rgba(128,128,128,.8); // not for text
 $midFadedGrey: rgba(128,128,128,.5); // not for text
 $fadedGrey: rgba(128,128,128,.2); // not for text

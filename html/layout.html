@@ -34,7 +34,7 @@
 			</footer>
 		</div>
 		<div class="base_content layout flex">
-			<header class="main_header" role="banner">
+			<header id="main_header" class="main_header" role="banner">
 				<p class="breadcrumbs">
 					Breadcrumbs
 				</p>
@@ -45,8 +45,11 @@
 			<div class="main_area">
 				<main id="target_content" class="" role="main">
 					<div class="main_actions">
+						<button>
+							Action secondaire
+						</button>				
 						<button type="submit">
-							Action
+							Action principale
 						</button>				
 					</div>
 					<div class="main_content">
@@ -61,6 +64,17 @@
 							<p>
 								Test avec scroll
 							</p>
+							<h5>Palettes</h5>
+							<ul>
+								<li><a href="javascript:void(0);" onclick="colourScheme( 'colour_default_1' );">Base 1</a></li>
+								<li><a href="javascript:void(0);" onclick="colourScheme( 'colour_default_2' );">Base 2</a></li>
+								<li><a href="javascript:void(0);" onclick="colourScheme( 'colour_manage_people' );">Gestion des personnes</a></li>
+								<li><a href="javascript:void(0);" onclick="colourScheme( 'colour_manage_entity' );">Gestion des enseignes</a></li>
+<!-- 
+								<li><a href="javascript:void(0);" onclick="functionalHeader( 'positive' );">En-tête fonctionnel positif</a></li>
+								<li><a href="javascript:void(0);" onclick="functionalHeader( 'negative' );">En-tête fonctionnel négatif</a></li>
+ -->
+							</ul>
 						</div>
 					</div>
 				</main>

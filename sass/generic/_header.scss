@@ -12,4 +12,22 @@
 	h1 {
 		padding-top: $verPadding;
 	}
+	&.positive {
+		background: $funcPositive !important;
+	}
+	&.negative {
+		background: $funcNegative !important;
+	}
+}
+.colour_default_1 .main_header {
+	background: $darkRed;
+}
+.colour_default_2 .main_header {
+	background: $darkGrey;
+}
+.colour_manage_people .main_header {
+	background: $darkBlue;
+}
+.colour_manage_entity .main_header {
+	background: $darkGreen;
 }

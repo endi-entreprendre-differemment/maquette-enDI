@@ -3,7 +3,7 @@ body.login {
 		height: 100vh;
 	}
 	.login_form {
-		box-shadow: 0 0 10px $grey;
+		box-shadow: 0 0 10px $midGrey;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -47,7 +47,7 @@ body.login {
 		}
 	}
 	.atwork_photo {
-		background-color: $grey;
+		background-color: $midGrey;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;

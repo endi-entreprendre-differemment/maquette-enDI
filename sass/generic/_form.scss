@@ -24,8 +24,8 @@ input[type="password"]:focus {
 	box-shadow: 0 1px 0 $midFadedGrey, 0 2px 0 $fadedGrey;
 }
 button {
-	background: $lightGreen;
-	border: 0 none;
+	background: $white;
+	border: 1px solid $lightGreen;
 	border-radius: 0;
 	cursor: pointer;
 	font-size: 14px;
@@ -33,10 +33,21 @@ button {
 	font-weight: bold;
 	padding: 10px 20px;
 }
+button[type="submit"],
+button.main {
+	background: $lightGreen;
+}
 button[aria-disabled='true'],
 button.disabled {
-	background: $grey;
+	border-color: $midGrey;
 	cursor: default;
+}
+button[type="submit"][aria-disabled='true'],
+button.main[aria-disabled='true'],
+button[type="submit"].disabled,
+button.main.disabled {
+	background-color: $midGrey;
+	color: $white;
 }
 button:not(.disabled):hover,
 button:not([aria-disabled='true']):hover,
@@ -44,9 +55,9 @@ button:not(.disabled):focus,
 button:not([aria-disabled='true']):focus,
 button:not(.disabled):active,
 button:not([aria-disabled='true']):active {
-	box-shadow: 0 2px 4px $grey;
+	box-shadow: 0 2px 4px $midGrey;
 }
-button {
+button.icon {
 	&::after {
 		display: inline-block;
 		font-size: 20px;
@@ -55,5 +66,44 @@ button {
 	}
 	&.next::after {
 		content: "\2192";
+	}
+}
+.colour_default_1 {
+	button {
+		border-color: $black;
+	}
+	button[type="submit"],
+	button.main {
+		background: $black;
+		color: $white;
+	}
+}
+.colour_default_2 {
+	button {
+		border-color: $lightGreen;
+	}
+	button[type="submit"],
+	button.main {
+		background: $lightGreen;
+	}
+}
+.colour_manage_people {
+	button {
+		border-color: $darkBlue;
+	}
+	button[type="submit"],
+	button.main {
+		background: $darkBlue;
+		color: $white;
+	}
+}
+.colour_manage_entity {
+	button {
+		border-color: $darkGreen;
+	}
+	button[type="submit"],
+	button.main {
+		background: $darkGreen;
+		color: $white;
 	}
 }

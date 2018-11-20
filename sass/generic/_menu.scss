@@ -1,7 +1,7 @@
-div.base_menu {
+.base_menu {
 	align-items: flex-start; 
 	background: $white;
-	box-shadow: 0 0 10px $grey;
+	box-shadow: 0 0 10px $midGrey;
 	display: flex;
 	flex-direction: column;
 	flex: 0 0 auto;
@@ -78,6 +78,66 @@ div.base_menu {
 		nav ul a {
 			padding-bottom: 10px;
 			padding-top: 10px;
+		}
+	}
+}
+.colour_default_1 .base_menu {
+	.user_avatar {
+		background: $darkRed;
+	}
+	nav ul {
+		a:hover,
+		a:focus {
+			background: $darkRed;
+		}
+		a:active,
+		li.current_item > a {
+			border-color: $darkRed;
+		}
+	}
+}
+.colour_default_2 .base_menu {
+	.user_avatar {
+		background: $darkGrey;
+	}
+	nav ul {
+		a:hover,
+		a:focus {
+			background: $darkGrey;
+		}
+		a:active,
+		li.current_item > a {
+			border-color: $darkGrey;
+		}
+	}
+}
+.colour_manage_people .base_menu {
+	.user_avatar {
+		background: $darkBlue;
+	}
+	nav ul {
+		a:hover,
+		a:focus {
+			background: $darkBlue;
+		}
+		a:active,
+		li.current_item > a {
+			border-color: $darkBlue;
+		}
+	}
+}
+.colour_manage_entity .base_menu {
+	.user_avatar {
+		background: $darkGreen;
+	}
+	nav ul {
+		a:hover,
+		a:focus {
+			background: $darkGreen;
+		}
+		a:active,
+		li.current_item > a {
+			border-color: $darkGreen;
 		}
 	}
 }

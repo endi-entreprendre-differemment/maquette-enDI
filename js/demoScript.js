@@ -55,3 +55,24 @@ function initDemoENDI() {
 		}
 	}
 }
+
+var header = document.getElementById("main_header");
+var functions = new Array ( 'positive', 'negative', 'caution');
+
+function colourScheme(whichScheme) {
+	document.body.className = whichScheme;
+	resetHeader();
+}
+
+function resetHeader() {
+	for ( i = 0; i < functions.length; i ++) {
+		if ( hasClass( header, functions[i] )) {
+			removeClass( header, functions[i]);
+		}
+	}
+}
+
+function functionalHeader(whichFunctionalInfo) {
+	resetHeader();
+	addClass( header, whichFunctionalInfo );
+}
