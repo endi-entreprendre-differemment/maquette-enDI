@@ -1,0 +1,83 @@
+div.base_menu {
+	align-items: flex-start; 
+	background: $white;
+	box-shadow: 0 0 10px $grey;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+	justify-content: space-between;
+	max-width: 300px;
+	> *:not(nav) {
+		flex: 0 0 auto;
+		padding: $verPadding $menuHorPadding;
+	}
+	> nav {
+		flex: 1 0 auto;
+		padding: $verPadding 0;
+		width: 100%;
+	}
+	.access_tools {
+		margin-left: -400px;
+		a {
+			display: block;
+			margin-bottom: 5px;
+			transition: transform .15s ease-out;
+		}
+		&:focus a,
+		a:focus {
+			transform: translate( 400px );
+		}
+	}
+	header {
+		font-weight: bold;
+		.user_avatar {
+			background: $darkRed;
+			border-radius: 50%;
+			display: inline-block;
+			height: 48px;
+			margin-right: 5px;
+			vertical-align: middle;
+			width: 48px;
+			img {
+				clip-path: circle( 24px at center );
+			}
+		}
+	}
+	nav ul {
+		list-style-type: none;
+		width: 100%;
+		li {
+			display: block;
+		}
+		a {
+			border-left: 5px solid $white;
+			color: $black;
+			display: block;
+			padding: 7px 10px 7px $menuLinkPadding;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				background: $darkRed;
+				color: $white;
+			}
+			&:active {
+				border-color: $darkRed;
+			}
+		}
+		li.current_item > a {
+			border-color: $darkRed;
+		}
+	}
+	footer {
+		font-size: 10px;
+		font-size: .625rem;
+	}
+}
+@media (min-height: 1001px) {
+	div.base_menu {
+		nav ul a {
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
+	}
+}

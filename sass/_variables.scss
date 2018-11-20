@@ -39,9 +39,11 @@ $funcNeutral: rgb(0,122,177); // ! on black
 
 // sizes
 $simpleLine: 1px;
-$doubleLine: 2px;
-$tripleLine: 3px;
-$screenPadding: 8px;
+$menuBorder: 5px;
+$menuHorPadding: 50px; // left padding
+$menuLinkPadding: $menuHorPadding - $menuBorder;
+$contentHorPadding: 30px;
+$verPadding: 10px;
 
 $iconSize: 32px;
 $midIconSize: 24px;

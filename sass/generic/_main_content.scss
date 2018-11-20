@@ -1,0 +1,22 @@
+.main_area {
+	height: calc( 100vh - 75px );
+	> main {
+		flex: 1 0 auto;
+	}
+}
+.main_actions {
+	background: $white;
+	margin-left: $contentHorPadding - 5px;
+	padding: $verPadding $contentHorPadding $verPadding 5px;
+	position: sticky;
+	text-align: right;
+	top: 0;
+}
+.main_content {
+	padding: $verPadding $contentHorPadding;
+}
+@media ( min-width: 1200px ) {
+	.main_area {
+		display: flex;
+	}
+}

@@ -1,0 +1,21 @@
+div.context_help {
+}
+@media ( min-width: 1200px ) {
+	div.context_help {
+		border-left: $simpleLine dashed $fadedGrey;
+		padding: $verPadding;
+		min-width: 150px;
+		max-width: 300px;
+		overflow: auto;
+		position: sticky;
+		right: 0;
+		top: 0;
+	}
+}
+@media ( max-width: 1200px ) {
+	div.context_help {
+		border-top: $simpleLine dashed $fadedGrey;
+		padding: $verPadding $contentHorPadding;
+		width: 100%;
+	}
+}

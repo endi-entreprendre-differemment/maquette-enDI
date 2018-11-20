@@ -85,6 +85,34 @@ button::after {
 button.next::after {
   content: "\2192"; }
 
+.main_header {
+  background: #9b001f;
+  color: white;
+  flex: 0 0 auto;
+  height: 75px;
+  padding: 5px 30px; }
+  .main_header .breadcrumbs {
+    font-size: 12px;
+    font-size: .75rem;
+    font-weight: 200; }
+  .main_header h1 {
+    padding-top: 10px; }
+
+@media (min-width: 1200px) {
+  div.context_help {
+    border-left: 1px dashed rgba(128, 128, 128, 0.2);
+    padding: 10px;
+    min-width: 150px;
+    max-width: 300px;
+    overflow: auto;
+    position: sticky;
+    right: 0;
+    top: 0; } }
+@media (max-width: 1200px) {
+  div.context_help {
+    border-top: 1px dashed rgba(128, 128, 128, 0.2);
+    padding: 10px 30px;
+    width: 100%; } }
 div.layout.flex {
   display: flex; }
 div.layout.third > div:first-child {
@@ -98,6 +126,102 @@ div.layout.third > div:last-child {
   div.layout.third > div:first-child,
   div.layout.third > div:last-child {
     width: 100%; } }
+div.base_layout {
+  height: 100vh;
+  width: 100vw; }
+
+div.base_content {
+  flex: 1 0 auto;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; }
+
+div.main_area {
+  flex: 1 0 auto;
+  overflow: auto; }
+
+.main_area {
+  height: calc( 100vh - 75px ); }
+  .main_area > main {
+    flex: 1 0 auto; }
+
+.main_actions {
+  background: white;
+  margin-left: 25px;
+  padding: 10px 30px 10px 5px;
+  position: sticky;
+  text-align: right;
+  top: 0; }
+
+.main_content {
+  padding: 10px 30px; }
+
+@media (min-width: 1200px) {
+  .main_area {
+    display: flex; } }
+div.base_menu {
+  align-items: flex-start;
+  background: white;
+  box-shadow: 0 0 10px gray;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  max-width: 300px; }
+  div.base_menu > *:not(nav) {
+    flex: 0 0 auto;
+    padding: 10px 50px; }
+  div.base_menu > nav {
+    flex: 1 0 auto;
+    padding: 10px 0;
+    width: 100%; }
+  div.base_menu .access_tools {
+    margin-left: -400px; }
+    div.base_menu .access_tools a {
+      display: block;
+      margin-bottom: 5px;
+      transition: transform .15s ease-out; }
+    div.base_menu .access_tools:focus a,
+    div.base_menu .access_tools a:focus {
+      transform: translate(400px); }
+  div.base_menu header {
+    font-weight: bold; }
+    div.base_menu header .user_avatar {
+      background: #9b001f;
+      border-radius: 50%;
+      display: inline-block;
+      height: 48px;
+      margin-right: 5px;
+      vertical-align: middle;
+      width: 48px; }
+      div.base_menu header .user_avatar img {
+        clip-path: circle(24px at center); }
+  div.base_menu nav ul {
+    list-style-type: none;
+    width: 100%; }
+    div.base_menu nav ul li {
+      display: block; }
+    div.base_menu nav ul a {
+      border-left: 5px solid white;
+      color: black;
+      display: block;
+      padding: 7px 10px 7px 45px;
+      text-decoration: none; }
+      div.base_menu nav ul a:hover, div.base_menu nav ul a:focus {
+        background: #9b001f;
+        color: white; }
+      div.base_menu nav ul a:active {
+        border-color: #9b001f; }
+    div.base_menu nav ul li.current_item > a {
+      border-color: #9b001f; }
+  div.base_menu footer {
+    font-size: 10px;
+    font-size: .625rem; }
+
+@media (min-height: 1001px) {
+  div.base_menu nav ul a {
+    padding-bottom: 10px;
+    padding-top: 10px; } }
 @font-face {
   font-family: 'Chivo';
   src: url("../resources/fonts/chivo-light-webfont.eot");
@@ -152,6 +276,36 @@ textarea,
 button {
   color: black;
   font-family: 'Chivo', sans-serif; }
+
+h1 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+h2 {
+  font-size: 22px;
+  font-size: 1.25rem;
+  font-weight: bold; }
+
+h3 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold; }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: bold; }
+
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: normal; }
+
+h6 {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold; }
 
 body.login .layout {
   height: 100vh; }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title>Structure d’écran – enDI</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+	<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen,projection,print">
+</head>
+<body class="colour_default_1">
+	<div class="base_layout layout flex screen">
+		<div class="base_menu flex">
+			<p class="access_tools" role="navigation" aria-label="page">
+				<a href="#target_content">aller au contenu</a>
+				<a href="#target_menu">au menu</a>
+			</p>
+			<header>
+				<span class="user_avatar"><img width="48" height="48" alt="avatar E. Peret" src="../resources/images/avatarContraste.png"></span> E. Peret
+			</header>
+			<nav id="target_menu">
+				<ul>
+					<li class="current_item"><a href="javascript:void(0);">Accueil</a></li>
+					<li><a href="javascript:void(0);">Clients</a></li>
+					<li><a href="javascript:void(0);">Projets</a></li>
+					<li><a href="javascript:void(0);">Gestion</a></li>
+					<li><a href="javascript:void(0);">Documents</a></li>
+					<li><a href="javascript:void(0);">Accompagnement</a></li>
+					<li><a href="javascript:void(0);">Paramètres</a></li>
+					<li><a href="javascript:void(0);">Annuaire</a></li>
+				</ul>
+			</nav>
+			<footer>
+				<img width="94" height="26" alt="enDI - entreprendre DIFFÉREMMENT" title="entreprendre DIFFÉREMMENT" src="../resources/endi_logo-noir.svg"><br>
+				v 1.0
+			</footer>
+		</div>
+		<div class="base_content layout flex">
+			<header class="main_header" role="banner">
+				<p class="breadcrumbs">
+					Breadcrumbs
+				</p>
+				<h1>
+					Titre de l’écran
+				</h1>
+			</header>
+			<div class="main_area">
+				<main id="target_content" class="" role="main">
+					<div class="main_actions">
+						<button type="submit">
+							Action
+						</button>				
+					</div>
+					<div class="main_content">
+						<div>
+							Contenu principal
+						</div>
+						<div>
+							Filtres (optionnel)
+						</div>
+						<div style="height: 100vh;">
+							Contenu…
+							<p>
+								Test avec scroll
+							</p>
+						</div>
+					</div>
+				</main>
+				<div class="context_help" role="complementary">
+					Aide contextuelle (optionnel)
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="../js/demoScript.js"></script>
+
+</body>
+</html>

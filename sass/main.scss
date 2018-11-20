@@ -2,7 +2,11 @@
 @import 'variables';
 
 @import 'generic/form';
+@import 'generic/header';
+@import 'generic/help';
 @import 'generic/layout';
+@import 'generic/main_content';
+@import 'generic/menu';
 @import 'generic/typo';
 
 @import 'pages/login';
