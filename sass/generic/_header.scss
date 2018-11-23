@@ -1,5 +1,5 @@
 .main_header {
-	background: $darkRed;
+	background: $darkGrey;
 	color: $white;
 	flex: 0 0 auto;
 	height: 75px;
@@ -19,15 +19,12 @@
 		background: $funcNegative !important;
 	}
 }
-.colour_default_1 .main_header {
-	background: $darkRed;
-}
-.colour_default_2 .main_header {
+.theme_default .main_header {
 	background: $darkGrey;
 }
-.colour_manage_people .main_header {
+.theme_manage_people .main_header {
 	background: $darkBlue;
 }
-.colour_manage_entity .main_header {
+.theme_manage_entity .main_header {
 	background: $darkGreen;
 }

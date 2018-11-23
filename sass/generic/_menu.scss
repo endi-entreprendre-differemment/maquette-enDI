@@ -31,7 +31,7 @@
 	header {
 		font-weight: bold;
 		.user_avatar {
-			background: $darkRed;
+			background: $darkGrey;
 			border-radius: 50%;
 			display: inline-block;
 			height: 48px;
@@ -57,15 +57,15 @@
 			text-decoration: none;
 			&:hover,
 			&:focus {
-				background: $darkRed;
+				background: $darkGrey;
 				color: $white;
 			}
 			&:active {
-				border-color: $darkRed;
+				border-color: $darkGrey;
 			}
 		}
 		li.current_item > a {
-			border-color: $darkRed;
+			border-color: $darkGrey;
 		}
 	}
 	footer {
@@ -81,23 +81,8 @@
 		}
 	}
 }
-.colour_default_1 .base_menu {
-	.user_avatar {
-		background: $darkRed;
-	}
-	nav ul {
-		a:hover,
-		a:focus {
-			background: $darkRed;
-		}
-		a:active,
-		li.current_item > a {
-			border-color: $darkRed;
-		}
-	}
-}
-.colour_default_2 .base_menu {
-	.user_avatar {
+.theme_default .base_menu {
+	header .user_avatar {
 		background: $darkGrey;
 	}
 	nav ul {
@@ -111,8 +96,8 @@
 		}
 	}
 }
-.colour_manage_people .base_menu {
-	.user_avatar {
+.theme_manage_people .base_menu {
+	header .user_avatar {
 		background: $darkBlue;
 	}
 	nav ul {
@@ -126,8 +111,8 @@
 		}
 	}
 }
-.colour_manage_entity .base_menu {
-	.user_avatar {
+.theme_manage_entity .base_menu {
+	header .user_avatar {
 		background: $darkGreen;
 	}
 	nav ul {

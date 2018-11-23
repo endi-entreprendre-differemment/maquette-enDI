@@ -1,0 +1,76 @@
+.notifications {
+	position: absolute;
+	right: 0;
+	top: 0;
+	ul {
+		list-style-type: none;
+	}
+	li {
+		align-items: center;
+		background: $transWhite;
+		border-left: 5px solid $white;
+		box-shadow: 0 0 1px $white, 0 0 5px $black;
+		display: flex;
+		margin: 5px;
+		&[class] {
+			.icon {
+				margin-left: -5px;
+				svg {
+					fill: $white;
+				}
+			}
+		}
+		&.success {
+			border-left-color: $funcPositive; 
+			.icon {
+				background: $funcPositive;
+			}
+		}
+		&.error {
+			border-left-color: $funcNegative; 
+			.icon {
+				background: $funcNegative;
+			}
+		}
+		&.caution {
+			border-left-color: $funcCaution; 
+			.icon {
+				background: $funcCaution;
+			}
+		}
+		&.neutral {
+			border-left-color: $funcNeutral; 
+			.icon {
+				background: $funcNeutral;
+			}
+		}
+		.text {
+			padding: 5px 10px;
+		}
+	}
+	span {
+		display: inline-block;
+	}
+	.icon{
+		height: 48px;
+		width: 48px;
+		svg {
+			fill: $black;
+			height: 36px;
+			margin: 4px;
+			width: 36px;
+		}
+	}
+	.close {
+		align-self: flex-start;
+		svg {
+			fill: $black;
+			height: 12px;
+			margin: 6px;
+			width: 12px;
+		}
+		&:hover svg {
+			fill: $lightGreen;
+		}
+	}
+}

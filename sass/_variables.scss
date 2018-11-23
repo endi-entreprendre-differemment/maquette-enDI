@@ -8,6 +8,9 @@ $fadedWhite: rgba(255,255,255,.2);
 
 // black
 $black: rgb(0,0,0);
+$transBlack: rgba(0,0,0,.8);
+$midFadedBlack: rgba(0,0,0,.5);
+$fadedBlack: rgba(0,0,0,.2);
 
 // grey
 $darkGrey: rgb(117,117,117);
@@ -35,9 +38,24 @@ $greyedBlue: rgb(103,119,126);
 
 // functional
 $funcPositive: rgb(0,137,81); // ! on white
+$transPositive: rgba(0,137,81,.8);
+$midFadedPositive: rgba(0,137,81,.5);
+$fadedPositive: rgba(0,137,81,.2);
+
 $funcNegative: rgb(225,20,0); // ! on black
+$transNegative: rgba(225,20,0,.8);
+$midFadedNegative: rgba(225,20,0,.5);
+$fadedNegative: rgba(225,20,0,.2);
+
 $funcCaution: rgb(255,150,0); // ✗ on white
+$transCaution: rgba(255,150,0,.8);
+$midFadedCaution: rgba(255,150,0,.5);
+$fadedCaution: rgba(255,150,0,.2);
+
 $funcNeutral: rgb(0,122,177); // ! on black
+$transNeutral: rgba(0,122,177,.8);
+$midFadedNeutral: rgba(0,122,177,.5);
+$fadedNeutral: rgba(0,122,177,.2);
 
 // sizes
 $simpleLine: 1px;
