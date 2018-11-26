@@ -7,31 +7,27 @@
 	<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen,projection,print">
 </head>
 <body class="colour_default_1">
-<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="icon-avatar" viewBox="0 0 512 512">
-<title>avatar</title>
-<path d="M22.25 12.75c0 3.452-2.798 6.25-6.25 6.25s-6.25-2.798-6.25-6.25c0-3.452 2.798-6.25 6.25-6.25s6.25 2.798 6.25 6.25z"></path>
-<path d="M22.412 18.704c2.526 1.535 4.213 4.312 4.213 7.483v5.813h-21.25v-5.813c0-3.171 1.687-5.949 4.213-7.483 1.598 1.72 3.879 2.796 6.412 2.796s4.814-1.076 6.412-2.796z"></path>
-</symbol>
-<symbol id="icon-cross" viewBox="0 0 32 32">
-<title>cross</title>
-<path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
-</symbol>
-<symbol id="icon-checkmark" viewBox="0 0 32 32">
-<title>checkmark</title>
-<path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
-</symbol>
-</defs>
-</svg>
 	<div class="base_layout layout flex screen">
-		<div class="base_menu flex">
+		<div id="demo_base_menu" class="base_menu flex">
 			<p class="access_tools" role="navigation" aria-label="page">
 				<a href="#target_content">aller au contenu</a>
 				<a href="#target_menu">au menu</a>
 			</p>
+			<div class="menu_tools">
+				<a href="javascript:void(0);" onclick="toggleOpen('demo_base_menu');" title="afficher le menu" class="icon menu">
+					<svg><use href="../resources/icons.svg#menu"></use></svg>
+					<span class="screen-reader-text">afficher le menu</span>
+				</a>
+			</div>
 			<header>
-				<span class="user_avatar"><img width="48" height="48" alt="avatar E. Peret" src="../resources/images/avatarContraste.png"></span> E. Peret
+				<span class="user_avatar">
+					<svg><use href="../resources/icons.svg#user"></use></svg>
+				</span> 
+				<a href="javascript:void(0);" title="modifier votre profil" class="icon edit">
+					E. Peret
+					<svg><use href="../resources/icons.svg#edit"></use></svg>
+					<span class="screen-reader-text">modifier votre profil</span>
+				</a>
 			</header>
 			<nav id="target_menu" role="navigation">
 				<ul>
@@ -51,7 +47,7 @@
 			</footer>
 		</div>
 		<div class="base_content layout flex">
-			<header id="main_header" class="main_header" role="banner">
+			<header id="demo_main_header" class="main_header" role="banner">
 				<p class="breadcrumbs">
 					Breadcrumbs
 				</p>
@@ -100,19 +96,20 @@
 		<h2 class="screen-reader-text">Notifications</h2>
 		<ul>
 			<li class="success">
-				<span class="icon">
-					<svg><use xlink:href="#icon-checkmark"></use></svg>
+				<span class="icon" title="validation">
+					<svg><use href="../resources/icons.svg#check"></use></svg>
+					<span class="screen-reader-text">validation</span>
 				</span>
 				<span class="text">La facture EP001-190101 a été validée.</span>
-				<a href="javascript:void(0);" title="fermer cette notification" onclick="addClass( this.parentNode, 'dismiss' );" class="close">
-					<svg><use xlink:href="#icon-cross"></use></svg>
-				<span class="screen-reader-text">fermer cette notification</span></a>
+				<a href="javascript:void(0);" title="fermer cette notification" onclick="addClass( this.parentNode, 'dismiss' );" class="icon close">
+					<svg><use href="../resources/icons.svg#cross"></use></svg>
+					<span class="screen-reader-text">fermer cette notification</span>
+				</a>
 			</li>
 		</ul>
 	</div>
 
 <script src="../js/demoScript.js"></script>
-<script defer src="../js/svgxuse.js"></script>
 
 </body>
 </html>

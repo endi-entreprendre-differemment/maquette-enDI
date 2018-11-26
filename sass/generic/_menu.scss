@@ -7,6 +7,7 @@
 	flex: 0 0 auto;
 	justify-content: space-between;
 	max-width: 300px;
+	position: relative;
 	> *:not(nav) {
 		flex: 0 0 auto;
 		padding: $verPadding $menuHorPadding;
@@ -25,7 +26,18 @@
 		}
 		&:focus a,
 		a:focus {
-			transform: translate( 400px );
+			transform: translate( 360px );
+		}
+	}
+	.menu_tools {
+		padding: 0;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		.icon svg {
+			height: 24px;
+			margin: 4px;
+			width: 24px;
 		}
 	}
 	header {
@@ -38,9 +50,21 @@
 			margin-right: 5px;
 			vertical-align: middle;
 			width: 48px;
-			img {
+			svg {
+				fill: $white;
+				height: 48px;
 				clip-path: circle( 24px at center );
+				width: 48px;
 			}
+		}
+		a {
+			color: $black;
+			text-decoration: none;
+		}
+		a:hover,
+		a:focus,
+		a:active {
+			text-decoration: underline;
 		}
 	}
 	nav ul {
@@ -80,6 +104,38 @@
 			padding-top: 10px;
 		}
 	}
+}
+@media (min-width: 1025px) {
+	.menu_tools .menu {
+		display: none;
+	}
+}
+@media (max-width: 1024px) {
+	.base_menu {
+		transition: margin .25s ease-out;
+		margin-left: -258px;
+		width: 300px;
+		nav,
+		header,
+		footer {
+			opacity: 0;
+			transition: opacity .25s .1s ease-out;
+		}
+		.menu_tools .menu {
+			display: block;
+		}
+	}
+	.base_menu.open {
+		margin-left: 0;
+		margin-right: -258px;
+		z-index: 10;
+		nav,
+		header,
+		footer {
+			opacity: 1;
+		}
+	}
+	
 }
 .theme_default .base_menu {
 	header .user_avatar {

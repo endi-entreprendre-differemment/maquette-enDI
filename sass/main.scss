@@ -32,7 +32,19 @@ a:focus,
 a:active {
 	text-decoration: none;
 }
-
+.icon > svg {
+	height: 16px;
+	pointer-events: none;
+	width: 16px;
+	title {
+		display: none;
+	}
+}
+a.icon:hover > svg,
+a.icon:focus > svg,
+a.icon:active > svg {
+	fill: $lightGreen;
+}
 
 
 .screen-reader-text {

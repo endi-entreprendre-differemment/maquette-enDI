@@ -13,7 +13,7 @@
 		display: flex;
 		margin: 5px;
 		&[class] {
-			.icon {
+			span.icon {
 				margin-left: -5px;
 				svg {
 					fill: $white;
@@ -22,25 +22,25 @@
 		}
 		&.success {
 			border-left-color: $funcPositive; 
-			.icon {
+			span.icon {
 				background: $funcPositive;
 			}
 		}
 		&.error {
 			border-left-color: $funcNegative; 
-			.icon {
+			span.icon {
 				background: $funcNegative;
 			}
 		}
 		&.caution {
 			border-left-color: $funcCaution; 
-			.icon {
+			span.icon {
 				background: $funcCaution;
 			}
 		}
 		&.neutral {
 			border-left-color: $funcNeutral; 
-			.icon {
+			span.icon {
 				background: $funcNeutral;
 			}
 		}
@@ -51,7 +51,7 @@
 	span {
 		display: inline-block;
 	}
-	.icon{
+	span.icon{
 		height: 48px;
 		width: 48px;
 		svg {
@@ -68,9 +68,6 @@
 			height: 12px;
 			margin: 6px;
 			width: 12px;
-		}
-		&:hover svg {
-			fill: $lightGreen;
 		}
 	}
 }

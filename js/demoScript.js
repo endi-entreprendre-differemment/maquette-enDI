@@ -46,7 +46,7 @@ function initDemoENDI() {
 		}
 		var current_photo_path = "background-image:url('../resources/photos/" + current_photo_padded + ".jpg')";
 		
-		var login_photo_div = document.getElementById( 'atwork_photo' );
+		var login_photo_div = document.getElementById( 'demo_atwork_photo' );
 
 		if ( login_photo_div ) {
 			login_photo_div.setAttribute( "style", current_photo_path );
@@ -56,7 +56,7 @@ function initDemoENDI() {
 	}
 }
 
-var header = document.getElementById("main_header");
+var header = document.getElementById("demo_main_header");
 var functions = new Array ( 'positive', 'negative', 'caution');
 
 function colourScheme(whichScheme) {
@@ -75,4 +75,17 @@ function resetHeader() {
 function functionalHeader(whichFunctionalInfo) {
 	resetHeader();
 	addClass( header, whichFunctionalInfo );
+}
+
+function toggleOpen( whichObject ) {
+	var object = document.getElementById( whichObject );
+	if ( !object ) {
+		object = whichObject;
+	}
+	if ( hasClass( object, 'open' ) ) {
+		removeClass( object, 'open' );
+	}
+	else {
+		addClass( object, 'open' );
+	}
 }

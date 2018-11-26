@@ -194,7 +194,8 @@ div.main_area {
   flex-direction: column;
   flex: 0 0 auto;
   justify-content: space-between;
-  max-width: 300px; }
+  max-width: 300px;
+  position: relative; }
   .base_menu > *:not(nav) {
     flex: 0 0 auto;
     padding: 10px 50px; }
@@ -210,7 +211,16 @@ div.main_area {
       transition: transform .15s ease-out; }
     .base_menu .access_tools:focus a,
     .base_menu .access_tools a:focus {
-      transform: translate(400px); }
+      transform: translate(360px); }
+  .base_menu .menu_tools {
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px; }
+    .base_menu .menu_tools .icon svg {
+      height: 24px;
+      margin: 4px;
+      width: 24px; }
   .base_menu header {
     font-weight: bold; }
     .base_menu header .user_avatar {
@@ -221,8 +231,18 @@ div.main_area {
       margin-right: 5px;
       vertical-align: middle;
       width: 48px; }
-      .base_menu header .user_avatar img {
-        clip-path: circle(24px at center); }
+      .base_menu header .user_avatar svg {
+        fill: white;
+        height: 48px;
+        clip-path: circle(24px at center);
+        width: 48px; }
+    .base_menu header a {
+      color: black;
+      text-decoration: none; }
+    .base_menu header a:hover,
+    .base_menu header a:focus,
+    .base_menu header a:active {
+      text-decoration: underline; }
   .base_menu nav ul {
     list-style-type: none;
     width: 100%; }
@@ -249,6 +269,30 @@ div.main_area {
   div.base_menu nav ul a {
     padding-bottom: 10px;
     padding-top: 10px; } }
+@media (min-width: 1025px) {
+  .menu_tools .menu {
+    display: none; } }
+@media (max-width: 1024px) {
+  .base_menu {
+    transition: margin .25s ease-out;
+    margin-left: -258px;
+    width: 300px; }
+    .base_menu nav,
+    .base_menu header,
+    .base_menu footer {
+      opacity: 0;
+      transition: opacity .25s .1s ease-out; }
+    .base_menu .menu_tools .menu {
+      display: block; }
+
+  .base_menu.open {
+    margin-left: 0;
+    margin-right: -258px;
+    z-index: 10; }
+    .base_menu.open nav,
+    .base_menu.open header,
+    .base_menu.open footer {
+      opacity: 1; } }
 .theme_default .base_menu header .user_avatar {
   background: #757575; }
 .theme_default .base_menu nav ul a:hover,
@@ -289,34 +333,34 @@ div.main_area {
     box-shadow: 0 0 1px white, 0 0 5px black;
     display: flex;
     margin: 5px; }
-    .notifications li[class] .icon {
+    .notifications li[class] span.icon {
       margin-left: -5px; }
-      .notifications li[class] .icon svg {
+      .notifications li[class] span.icon svg {
         fill: white; }
     .notifications li.success {
       border-left-color: #008951; }
-      .notifications li.success .icon {
+      .notifications li.success span.icon {
         background: #008951; }
     .notifications li.error {
       border-left-color: #e11400; }
-      .notifications li.error .icon {
+      .notifications li.error span.icon {
         background: #e11400; }
     .notifications li.caution {
       border-left-color: #ff9600; }
-      .notifications li.caution .icon {
+      .notifications li.caution span.icon {
         background: #ff9600; }
     .notifications li.neutral {
       border-left-color: #007ab1; }
-      .notifications li.neutral .icon {
+      .notifications li.neutral span.icon {
         background: #007ab1; }
     .notifications li .text {
       padding: 5px 10px; }
   .notifications span {
     display: inline-block; }
-  .notifications .icon {
+  .notifications span.icon {
     height: 48px;
     width: 48px; }
-    .notifications .icon svg {
+    .notifications span.icon svg {
       fill: black;
       height: 36px;
       margin: 4px;
@@ -328,8 +372,6 @@ div.main_area {
       height: 12px;
       margin: 6px;
       width: 12px; }
-    .notifications .close:hover svg {
-      fill: #1de67e; }
 
 @font-face {
   font-family: 'Chivo';
@@ -514,6 +556,18 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none; }
+
+.icon > svg {
+  height: 16px;
+  pointer-events: none;
+  width: 16px; }
+  .icon > svg title {
+    display: none; }
+
+a.icon:hover > svg,
+a.icon:focus > svg,
+a.icon:active > svg {
+  fill: #1de67e; }
 
 .screen-reader-text {
   border: 0;
