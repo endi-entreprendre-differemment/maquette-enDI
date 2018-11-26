@@ -1,0 +1,64 @@
+.dashboard {
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0 -$unitPadding*2;
+	padding-top: $contentVerPadding*2;
+	.dash_elem {
+		box-shadow: 0 0 5px $darkGrey;
+		margin: $unitPadding*2;
+		width: 450px;
+		min-height: 250px;
+	}
+	h2 {
+		padding: $unitPadding*2 $unitPadding;
+		.icon svg {
+			height: 24px;
+			margin: 0 5px;
+			vertical-align: text-bottom;
+			width: 24px;
+		}
+	}
+	.search_form {
+		padding: $unitPadding $unitPadding*2;
+		input:only-of-type {
+			flex: 1 0 auto;
+		}
+		button {
+			flex: 0 0 auto;
+			margin-left: $unitPadding;
+		}
+	}
+	table {
+		margin: $unitPadding*2 $unitPadding;
+		width: calc( 100% - 10px );
+	}
+}
+@media (min-width: 1280px) {
+	.dashboard {
+		.dash_elem {
+			width: 450px;
+		}
+	}
+}
+@media (min-width: 1025px) {
+	.dashboard {
+		.dash_elem {
+			width: 400px;
+		}
+	}
+}
+.theme_default .dashboard {
+	h2 {
+		background: $fadedGrey;
+	}
+}
+.theme_manage_people .dashboard {
+	h2 {
+		background: $fadedBlue;
+	}
+}
+.theme_manage_entity .dashboard {
+	h2 {
+		background: $fadedGreen;
+	}
+}

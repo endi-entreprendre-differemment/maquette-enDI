@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
 	<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen,projection,print">
 </head>
-<body class="colour_default_1">
+<body class="theme_default">
 	<div class="base_layout layout flex screen">
 		<div id="demo_base_menu" class="base_menu flex">
 			<p class="access_tools" role="navigation" aria-label="page">
@@ -24,7 +24,7 @@
 					<svg><use href="../resources/icons.svg#user"></use></svg>
 				</span> 
 				<a href="javascript:void(0);" title="modifier votre profil" class="icon edit">
-					E. Peret
+					É. Peret
 					<svg><use href="../resources/icons.svg#edit"></use></svg>
 					<span class="screen-reader-text">modifier votre profil</span>
 				</a>
@@ -42,7 +42,7 @@
 				</ul>
 			</nav>
 			<footer>
-				<img width="94" height="26" alt="enDI - entreprendre DIFFÉREMMENT" title="entreprendre DIFFÉREMMENT" src="../resources/endi_logo-noir.svg"><br>
+				<img width="94" height="26" alt="Logo enDI - entreprendre DIFFÉREMMENT" title="entreprendre DIFFÉREMMENT" src="../resources/endi_logo-noir.svg"><br>
 				v 1.0
 			</footer>
 		</div>
@@ -61,7 +61,7 @@
 						<button>
 							Action secondaire
 						</button>				
-						<button type="submit">
+						<button type="submit" class="main">
 							Action principale
 						</button>				
 					</div>
@@ -95,13 +95,13 @@
 	<div class="notifications">
 		<h2 class="screen-reader-text">Notifications</h2>
 		<ul>
-			<li class="success">
+			<li class="success open">
 				<span class="icon" title="validation">
 					<svg><use href="../resources/icons.svg#check"></use></svg>
 					<span class="screen-reader-text">validation</span>
 				</span>
 				<span class="text">La facture EP001-190101 a été validée.</span>
-				<a href="javascript:void(0);" title="fermer cette notification" onclick="addClass( this.parentNode, 'dismiss' );" class="icon close">
+				<a href="javascript:void(0);" title="fermer cette notification" onclick="toggleOpen( this.parentNode );" class="icon close">
 					<svg><use href="../resources/icons.svg#cross"></use></svg>
 					<span class="screen-reader-text">fermer cette notification</span>
 				</a>

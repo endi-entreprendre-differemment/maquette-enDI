@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title>Accueil – enDI</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+	<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen,projection,print">
+</head>
+<body class="theme_manage_people">
+	<div class="base_layout layout flex screen">
+		<div id="demo_base_menu" class="base_menu flex">
+			<p class="access_tools" role="navigation" aria-label="page">
+				<a href="#target_content">aller au contenu</a>
+				<a href="#target_menu">au menu</a>
+			</p>
+			<div class="menu_tools">
+				<a href="javascript:void(0);" onclick="toggleOpen('demo_base_menu');" title="afficher le menu" class="icon menu">
+					<svg><use href="../resources/icons.svg#menu"></use></svg>
+					<span class="screen-reader-text">afficher le menu</span>
+				</a>
+			</div>
+			<header>
+				<span class="user_avatar">
+					<svg><use href="../resources/icons.svg#user"></use></svg>
+				</span> 
+				<a href="javascript:void(0);" title="modifier votre profil" class="icon edit">
+					É. Peret
+					<svg><use href="../resources/icons.svg#edit"></use></svg>
+					<span class="screen-reader-text">modifier votre profil</span>
+				</a>
+			</header>
+			<nav id="target_menu" role="navigation">
+				<ul>
+					<li class="current_item"><a href="javascript:void(0);">Accueil</a></li>
+					<li><a href="javascript:void(0);">Clients</a></li>
+					<li><a href="javascript:void(0);">Projets</a></li>
+					<li><a href="javascript:void(0);">Gestion</a></li>
+					<li><a href="javascript:void(0);">Documents</a></li>
+					<li><a href="javascript:void(0);">Accompagnement</a></li>
+					<li><a href="javascript:void(0);">Paramètres</a></li>
+					<li><a href="javascript:void(0);">Annuaire</a></li>
+				</ul>
+			</nav>
+			<footer>
+				<img width="94" height="26" alt="Logo enDI - entreprendre DIFFÉREMMENT" title="entreprendre DIFFÉREMMENT" src="../resources/endi_logo-noir.svg"><br>
+				v 1.0
+			</footer>
+		</div>
+		<div class="base_content layout flex">
+			<header id="demo_main_header" class="main_header" role="banner">
+				<p class="breadcrumbs">
+					enDI > Tableau de bord
+				</p>
+				<h1>
+					Tableau de bord
+				</h1>
+			</header>
+			<div class="main_area">
+				<main id="target_content" class="" role="main">
+					<div class="main_content">
+						<p class="message">
+							Bonjour Élise Peret, bienvenue dans votre espace personnel.
+						</p>
+						<div class="layout flex dashboard">
+							<div class="dash_elem">
+								<h2>
+									<span class="icon">
+										<svg><use href="../resources/icons.svg#file-text"></use></svg>
+									</span>
+									Vos documents
+								</h2>
+								<form>
+									<div class="layout flex search_form">
+										<label for="doc_search" class="screen-reader-text">Rechercher par nom ou type de document, par client</label>
+										<input type="text" id="doc_search" placeholder="nom, type, client" title="Rechercher par nom ou type de document, par client">
+										<button type="submit" class="icon only" title="Rechercher">
+											<svg><use href="../resources/icons.svg#search"></use></svg>
+											<span class="screen-reader-text">Rechercher</span>
+										</button>
+									</div>
+								</form>
+								<table>
+									<thead>
+										<tr>
+											<th scope="col" class="colText">Nom</th>
+											<th scope="col" class="colText">Client</th>
+											<th scope="col" class="colState">État</th>
+											<th scope="col" class="colActions">Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="colText">EP001-190101</td>
+											<td class="colText">Garcia</td>
+											<td class="colState" title="Validée le 29 novembre 2018 à 17:00">
+												<span class="icon"><svg><use href="../resources/icons.svg#check"></use></svg></span> Validé
+												<span class="screen-reader-text">Validée le 29 novembre 2018 à 17:00</span>
+											</td>
+											<td class="colActions">
+												<button type="submit" class="icon only" title="Voir le document">
+													<span class="screen-reader-text">Voir le document</span>
+													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
+												</button>
+												<button type="submit" class="icon only" title="Télécharger le document au format pdf">
+													<span class="screen-reader-text">Télécharger le document au format pdf</span>
+													<svg><use href="../resources/icons.svg#file-pdf"></use></svg>
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="dash_elem">
+								<h2>
+									<span class="icon">
+										<svg><use href="../resources/icons.svg#calendar"></use></svg>
+									</span>
+									Calendrier
+								</h2>
+								<table>
+									<thead>
+										<tr>
+											<th scope="col" class="colText">Intitulé</th>
+											<th scope="col" class="colState">État</th>
+											<th scope="col">Date</th>											
+											<th scope="col" class="colActions">Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="colText">Rendez-vous avec Cécile Legrand</td>
+											<td class="colState">
+												<span class="icon"><svg><use href="../resources/icons.svg#clock"></use></svg></span> Programmé
+											</td>
+											<td>
+												29/11/2018
+											</td>
+											<td class="colActions">
+												<button type="submit" class="icon only" title="Voir le document">
+													<span class="screen-reader-text">Voir le document</span>
+													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="dash_elem">
+								<h2>
+									<span class="icon">
+										<svg><use href="../resources/icons.svg#coin-euro"></use></svg>
+									</span>
+									Transactions
+								</h2>
+							</div>
+						</div>
+					</div>
+				</main>
+<!-- 
+				<div class="context_help" role="complementary">
+					Aide contextuelle (optionnel)
+				</div>
+ -->
+			</div>
+		</div>
+	</div>
+	<div class="notifications">
+		<h2 class="screen-reader-text">Notifications</h2>
+		<ul>
+			<li class="success">
+				<span class="icon" title="validation">
+					<svg><use href="../resources/icons.svg#check"></use></svg>
+					<span class="screen-reader-text">validation</span>
+				</span>
+				<span class="text">La facture EP001-190101 a été validée.</span>
+				<a href="javascript:void(0);" title="fermer cette notification" onclick="toggleOpen( this.parentNode );" class="icon close">
+					<svg><use href="../resources/icons.svg#cross"></use></svg>
+					<span class="screen-reader-text">fermer cette notification</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+<script src="../js/demoScript.js"></script>
+
+</body>
+</html>

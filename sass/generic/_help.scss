@@ -3,7 +3,7 @@ div.context_help {
 @media ( min-width: 1200px ) {
 	div.context_help {
 		border-left: $simpleLine dashed $fadedGrey;
-		padding: $verPadding;
+		padding: $contentVerPadding;
 		min-width: 150px;
 		max-width: 300px;
 		overflow: auto;
@@ -15,7 +15,7 @@ div.context_help {
 @media ( max-width: 1200px ) {
 	div.context_help {
 		border-top: $simpleLine dashed $fadedGrey;
-		padding: $verPadding $contentHorPadding;
+		padding: $contentVerPadding $contentHorPadding;
 		width: 100%;
 	}
 }

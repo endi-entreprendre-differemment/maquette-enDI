@@ -3,14 +3,14 @@
 	color: $white;
 	flex: 0 0 auto;
 	height: 75px;
-	padding: $verPadding/2 $contentHorPadding;
+	padding: $contentVerPadding/2 $contentHorPadding;
 	.breadcrumbs {
 		font-size: 12px;
 		font-size: .75rem;
 		font-weight: 200;
 	}
 	h1 {
-		padding-top: $verPadding;
+		padding-top: $contentVerPadding;
 	}
 	&.positive {
 		background: $funcPositive !important;

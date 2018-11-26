@@ -11,6 +11,21 @@ div.layout {
 		}
 	}
 }
+div.base_layout {
+	height: 100vh;
+	overflow: hidden;
+	width: 100vw;
+}
+div.base_content {
+	flex: 1 0 auto;
+	flex-direction: column;
+	height: 100vh;
+	overflow: hidden;
+}
+div.main_area {
+	flex: 1 0 auto;
+	overflow: auto;
+}
 @media (max-width: 800px) {
 	div.layout {
 		&.flex {
@@ -23,18 +38,4 @@ div.layout {
 			}
 		}
 	}
-}
-div.base_layout {
-	height: 100vh;
-	width: 100vw;
-}
-div.base_content {
-	flex: 1 0 auto;
-	flex-direction: column;
-	height: 100vh;
-	overflow: hidden;
-}
-div.main_area {
-	flex: 1 0 auto;
-	overflow: auto;
 }

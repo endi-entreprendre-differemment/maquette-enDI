@@ -9,8 +9,10 @@
 @import 'generic/main_content';
 @import 'generic/menu';
 @import 'generic/notif';
+@import 'generic/table';
 @import 'generic/typo';
 
+@import 'pages/dashboard';
 @import 'pages/login';
 
 
@@ -35,6 +37,7 @@ a:active {
 .icon > svg {
 	height: 16px;
 	pointer-events: none;
+	vertical-align: text-top;
 	width: 16px;
 	title {
 		display: none;

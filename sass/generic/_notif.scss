@@ -45,7 +45,10 @@
 			}
 		}
 		.text {
-			padding: 5px 10px;
+			padding: $unitPadding $unitPadding*2;
+		}
+		&:not(.open) {
+			display: none;
 		}
 	}
 	span {

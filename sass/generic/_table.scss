@@ -1,0 +1,21 @@
+table {
+	th {
+		background: $fadedGrey;
+	}
+	th,
+	td {
+		padding: 4px 2px;
+	}
+	td {
+		text-align: center;
+	}
+	.colText {
+		text-align: left;
+	}
+	.colActions {
+		text-align: right;
+	}
+	.colState {
+		white-space: nowrap;
+	}
+}

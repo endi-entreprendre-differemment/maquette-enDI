@@ -31,9 +31,11 @@ button {
 	font-size: 14px;
 	font-size: .875rem;
 	font-weight: bold;
-	padding: 10px 20px;
+	padding: $unitPadding*2 $unitPadding*4;
+	&.icon.only {
+		padding: $unitPadding*2;
+	}
 }
-button[type="submit"],
 button.main {
 	background: $lightGreen;
 }
@@ -42,9 +44,7 @@ button.disabled {
 	border-color: $midGrey;
 	cursor: default;
 }
-button[type="submit"][aria-disabled='true'],
 button.main[aria-disabled='true'],
-button[type="submit"].disabled,
 button.main.disabled {
 	background-color: $midGrey;
 	color: $white;
@@ -58,13 +58,13 @@ button:not([aria-disabled='true']):active {
 	box-shadow: 0 2px 4px $midGrey;
 }
 button.icon {
-	&::after {
-		display: inline-block;
-		font-size: 20px;
-		font-size: 1.25rem;
-		margin: -10px 0 -10px 5px;
+	svg {
+		margin-left: $unitPadding;
+		vertical-align: text-bottom;
 	}
-	&.next::after {
-		content: "\2192";
+	&.only {
+		svg {
+			margin-left: 0;
+		}
 	}
 }

@@ -7,7 +7,7 @@ body.login {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 50px;
+		padding: $menuHorPadding;
 		z-index: 10;
 		.endi_logo {
 			flex: 1 0 auto;
@@ -30,10 +30,10 @@ body.login {
 			justify-content: space-between;
 			flex: 0 0 auto;
 			p:first-child {
-				margin-right: 5px;
+				margin-right: $unitPadding;
 			}
 			p:last-child {
-				margin-left: 5px;
+				margin-left: $unitPadding;
 				text-align: right;
 			}
 			a {
@@ -57,7 +57,7 @@ body.login {
 			bottom: 10px;
 			font-size: 12px;
 			font-size: .75rem;
-			padding: 5px 10px;
+			padding: $unitPadding $unitPadding*2;
 			position: absolute;
 			right: 10px;
 			text-align: right;
@@ -75,7 +75,7 @@ body.login {
 @media (max-width: 500px) {
 	body.login {
 		.login_form {
-			padding: 20px;
+			padding: $unitPadding*4;
 			form {
 				padding-top: 40px;
 			}

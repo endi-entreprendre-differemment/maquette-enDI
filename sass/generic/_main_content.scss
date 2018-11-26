@@ -7,16 +7,32 @@
 .main_actions {
 	background: $white;
 	margin-left: $contentHorPadding - 5px;
-	padding: $verPadding $contentHorPadding $verPadding 5px;
+	padding: $contentVerPadding $contentHorPadding $contentVerPadding 5px;
 	position: sticky;
 	text-align: right;
 	top: 0;
 }
 .main_content {
-	padding: $verPadding $contentHorPadding;
+	padding: $contentVerPadding*2 $contentHorPadding;
 }
 @media ( min-width: 1200px ) {
+// 	.main_area {
+// 		display: flex;
+// 	}
+}
+
+@media (min-width: 1280px) {
 	.main_area {
-		display: flex;
+		width: calc( 100vw - 300px );
+	}
+}
+@media (min-width: 1025px) {
+	.main_area {
+		width: calc( 100vw - 250px );
+	}
+}
+@media (max-width: 1024px) {
+	.main_area {
+		width: calc( 100vw - 42px );
 	}
 }
