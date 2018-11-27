@@ -87,11 +87,14 @@ button:not(.disabled):active,
 button:not([aria-disabled='true']):active {
   box-shadow: 0 2px 4px gray; }
 
-button.icon svg {
-  margin-left: 5px;
+button svg {
   vertical-align: text-bottom; }
+button svg:first-child {
+  margin-right: 5px; }
+button svg:last-child {
+  margin-left: 5px; }
 button.icon.only svg {
-  margin-left: 0; }
+  margin: 0; }
 
 .main_header {
   background: #757575;
@@ -386,15 +389,14 @@ div.main_area {
   .notifications .close {
     align-self: flex-start; }
     .notifications .close svg {
-      fill: black;
-      height: 12px;
-      margin: 6px;
-      width: 12px; }
+      fill: black; }
 
 table th {
   background: rgba(128, 128, 128, 0.1); }
 table th,
 table td {
+  font-size: 14px;
+  font-size: .875rem;
   padding: 4px 2px; }
 table td {
   text-align: center; }
@@ -403,18 +405,24 @@ table .colText {
   table .colText a {
     color: black;
     display: block;
-    text-decoration: none; }
+    line-height: 1.25em;
+    text-decoration: underline; }
   table .colText a:hover,
   table .colText a:focus,
   table .colText a:active {
-    text-decoration: underline; }
+    text-decoration: none; }
 table .colActions {
   text-align: right; }
 table .colState {
-  font-size: 14px;
-  font-size: .825rem;
   text-align: left;
   white-space: nowrap; }
+table .colNumber {
+  text-align: right; }
+table .colDate {
+  width: 8em; }
+table td.colState {
+  font-size: 14px;
+  font-size: .825rem; }
 table tbody tr:nth-child(2n) td {
   background: rgba(128, 128, 128, 0.05); }
 table tfoot tr:first-child td {
@@ -486,26 +494,26 @@ h2 {
   font-weight: bold; }
 
 h3 {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   margin-bottom: .2em; }
 
 h4 {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: .2em; }
 
 h5 {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   margin-bottom: .2em; }
 
 h6 {
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 14px;
+  font-size: .875rem;
   font-weight: bold;
   margin-bottom: .2em; }
 
@@ -515,17 +523,39 @@ h6 {
   margin: -10px;
   padding-top: 20px; }
   .dashboard .dash_elem {
-    box-shadow: 0 0 5px #757575;
     margin: 10px;
     width: calc( 50% - 20px);
     min-height: 250px; }
+    .dashboard .dash_elem:not(.empty) {
+      box-shadow: 0 0 5px #757575; }
+    .dashboard .dash_elem.empty {
+      align-items: center;
+      border: 1px dashed rgba(128, 128, 128, 0.2);
+      display: flex;
+      justify-content: center; }
   .dashboard h2 {
-    padding: 10px 5px; }
-    .dashboard h2 .icon svg {
+    padding: 10px 5px;
+    position: relative; }
+    .dashboard h2 .icon:first-child svg {
       height: 24px;
       margin: 0 5px;
       vertical-align: text-bottom;
       width: 24px; }
+    .dashboard h2 .icon.close {
+      right: 10px;
+      position: absolute; }
+  .dashboard h3 {
+    margin: 20px 10px 0; }
+    .dashboard h3 + table {
+      margin-top: 0; }
+  .dashboard ul {
+    list-style-type: none;
+    padding: 10px; }
+    .dashboard ul li {
+      border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+      padding-bottom: 10px; }
+    .dashboard ul h3 {
+      margin: 10px 0 5px; }
   .dashboard .search_form {
     padding: 5px 10px; }
     .dashboard .search_form input:only-of-type {
@@ -536,6 +566,8 @@ h6 {
   .dashboard table {
     margin: 10px 5px;
     width: calc( 100% - 10px ); }
+    .dashboard table tfoot td {
+      padding-top: 10px; }
 
 @media (max-width: 1024px) {
   .dashboard .dash_elem {
@@ -654,18 +686,25 @@ a:active {
     width: 16px; }
     .icon > svg title {
       display: none; }
+  .icon.close svg {
+    height: 12px;
+    margin: 6px;
+    width: 12px; }
 
 a.icon:hover > svg,
 a.icon:focus > svg,
 a.icon:active > svg {
+  filter: drop-shadow(0 1px 0 white);
   fill: #1de67e; }
 
 .icon.state {
+  background: gray;
   border-radius: 4px;
+  display: inline-block;
   padding: 5px 4px 4px; }
   .icon.state svg {
     fill: white; }
-  .icon.state.success {
+  .icon.state.success, .icon.state.valid {
     background: #008951; }
   .icon.state.caution, .icon.state.unpaid {
     background: #ff9600; }

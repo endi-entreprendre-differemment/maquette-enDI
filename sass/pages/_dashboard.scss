@@ -4,18 +4,48 @@
 	margin: 0 -$unitPadding*2;
 	padding-top: $contentVerPadding*2;
 	.dash_elem {
-		box-shadow: 0 0 5px $darkGrey;
 		margin: $unitPadding*2;
 		width: calc( 50% - 20px);
 		min-height: 250px;
+		&:not(.empty) {
+			box-shadow: 0 0 5px $darkGrey;
+		}
+		&.empty {
+			align-items: center;
+			border: 1px dashed $fadedGrey;
+			display: flex;
+			justify-content: center;
+		}
 	}
 	h2 {
 		padding: $unitPadding*2 $unitPadding;
-		.icon svg {
+		position: relative;
+		.icon:first-child svg {
 			height: 24px;
 			margin: 0 5px;
 			vertical-align: text-bottom;
 			width: 24px;
+		}
+		.icon.close {
+			right: $unitPadding*2;
+			position: absolute;
+		}
+	}
+	h3 {
+		margin: $unitPadding*4 $unitPadding*2 0;
+		+ table {
+			margin-top: 0;
+		}
+	}
+	ul {
+		list-style-type: none;
+		padding: $unitPadding*2;
+		li {
+			border-bottom: 1px solid $veryFadedGrey;
+			padding-bottom: $unitPadding*2;
+		}
+		h3 {
+			margin: $unitPadding*2 0 $unitPadding;
 		}
 	}
 	.search_form {
@@ -31,22 +61,11 @@
 	table {
 		margin: $unitPadding*2 $unitPadding;
 		width: calc( 100% - 10px );
+		tfoot td {
+			padding-top: $unitPadding*2;
+		}
 	}
 }
-// @media (min-width: 1280px) {
-// 	.dashboard {
-// 		.dash_elem {
-// 			width: calc( 50vw - 195px);
-// 		}
-// 	}
-// }
-// @media (min-width: 1025px) {
-// 	.dashboard {
-// 		.dash_elem {
-// 			width: calc( 50vw - 170px);
-// 		}
-// 	}
-// }
 @media (max-width: 1024px) {
 	.dashboard {
 		.dash_elem {

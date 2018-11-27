@@ -68,6 +68,10 @@
 										<svg><use href="../resources/icons.svg#file-text"></use></svg>
 									</span>
 									Vos documents
+									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
+										<svg><use href="../resources/icons.svg#cross"></use></svg>
+										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
+									</a>
 								</h2>
 								<form>
 									<div class="layout flex search_form">
@@ -200,30 +204,71 @@
 										<svg><use href="../resources/icons.svg#calendar"></use></svg>
 									</span>
 									Calendrier
+									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
+										<svg><use href="../resources/icons.svg#cross"></use></svg>
+										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
+									</a>
 								</h2>
 								<table>
 									<thead>
 										<tr>
-											<th scope="col" class="colText">Intitulé</th>
-											<th scope="col" class="colState">État</th>
-											<th scope="col">Date</th>											
-											<th scope="col" class="colActions">Actions</th>
+											<th scope="col" class="colDate screen-reader-text">Date</th>											
+											<th scope="col" class="colText screen-reader-text">Intitulé</th>
+											<th scope="col" class="colState screen-reader-text">État</th>
+											<th scope="col" class="colActions screen-reader-text">Actions</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td class="colText">Rendez-vous avec Cécile Legrand</td>
-											<td class="colState">
-												<span class="icon"><svg><use href="../resources/icons.svg#clock"></use></svg></span> Programmé
+											<td class="colDate">
+												05/12/2018
 											</td>
-											<td>
-												29/11/2018
+											<td class="colText"><a href="javascript:void(0);">Formation Associé SCIC</a></td>
+											<td class="colState">
+												<span class="icon state"><svg><use href="../resources/icons.svg#star"></use></svg></span> Recommandé
 											</td>
 											<td class="colActions">
-												<button class="icon only" title="Voir le document">
-													<span class="screen-reader-text">Voir le document</span>
+												<button class="icon only" title="S’inscrire à cette événement">
+													<span class="screen-reader-text">S’inscrire à cette événement</span>
+													<svg><use href="../resources/icons.svg#calendar"></use></svg>
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="colDate">
+												29/11/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Rendez-vous avec Cécile Legrand</a></td>
+											<td class="colState">
+												<span class="icon state valid"><svg><use href="../resources/icons.svg#clock"></use></svg></span> Programmé
+											</td>
+											<td class="colActions">
+												<button class="icon only" title="Voir cet événement">
+													<span class="screen-reader-text">Voir cet événement</span>
 													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
 												</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="colDate">
+												16/11/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Atelier clôture des comptes</a></td>
+											<td class="colState">
+												<span class="icon state done"><svg><use href="../resources/icons.svg#check"></use></svg></span> Terminé
+											</td>
+											<td class="colActions">
+											</td>
+										</tr>
+										<tr>
+											<td class="colDate">
+												28/10/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Atelier clôture des comptes</a></td>
+											<td class="colState">
+												<span class="icon state invalid"><svg><use href="../resources/icons.svg#cross"></use></svg></span> Annulé
+											</td>
+											<td class="colActions">
 											</td>
 										</tr>
 									</tbody>
@@ -235,7 +280,126 @@
 										<svg><use href="../resources/icons.svg#coin-euro"></use></svg>
 									</span>
 									Transactions
+									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
+										<svg><use href="../resources/icons.svg#cross"></use></svg>
+										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
+									</a>
 								</h2>
+								<h3>
+									Encaissements
+								</h3>
+								<table>
+									<thead>
+										<tr>
+											<th scope="col" class="colDate screen-reader-text">Date</th>											
+											<th scope="col" class="colText screen-reader-text">Intitulé</th>
+											<th scope="col" class="colNumber screen-reader-text">Montant</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="colDate">
+												24/11/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Réglement par virement</a></td>
+											<td class="colNumber">
+												562,28&nbsp;€
+											</td>
+										</tr>
+										<tr>
+											<td class="colDate">
+												16/11/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Réglement par virement</a></td>
+											<td class="colNumber">
+												375,09&nbsp;€
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<h3>
+									Remboursements et salaires
+								</h3>
+								<table>
+									<thead>
+										<tr>
+											<th scope="col" class="colDate screen-reader-text">Date</th>											
+											<th scope="col" class="colText screen-reader-text">Intitulé</th>
+											<th scope="col" class="colNumber screen-reader-text">Montant</th>
+											<th scope="col" class="colState screen-reader-text">Statut</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="colDate">
+												30/12/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Salaire</a></td>
+											<td class="colNumber">
+												1075,28&nbsp;€
+											</td>
+											<td class="colState">
+												<span class="icon state"><svg><use href="../resources/icons.svg#clock"></use></svg></span> Programmé
+											</td>
+										</tr>
+										<tr>
+											<td class="colDate">
+												10/12/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Remboursement de frais</a></td>
+											<td class="colNumber">
+												96,51&nbsp;€
+											</td>
+											<td class="colState">
+												<span class="icon state"><svg><use href="../resources/icons.svg#clock"></use></svg></span> Programmé
+											</td>
+										</tr>
+										<tr>
+											<td class="colDate">
+												30/11/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Salaire</a></td>
+											<td class="colNumber">
+												1075,28&nbsp;€
+											</td>
+											<td class="colState">
+												<span class="icon state valid"><svg><use href="../resources/icons.svg#check"></use></svg></span> Effectué
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="dash_elem">
+								<h2>
+									<span class="icon">
+										<svg><use href="../resources/icons.svg#bubbles"></use></svg>
+									</span>
+									Vie de la CAE
+									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
+										<svg><use href="../resources/icons.svg#cross"></use></svg>
+										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
+									</a>
+								</h2>
+								<ul>
+									<li>
+										<h3>Nouvelle promotion</h3>
+										<p>
+											La nouvelle promotion <strong>NovScoop</strong> nous a rejoint début novembre. <a href="javascript:void(0);">Retrouvez-les sur le blog.</a>
+										</p>
+									</li>
+									<li>
+										<h3>Trimestrielle</h3>
+										<p>
+											Les supports et les photos de la trimestrielle de rentrée sont <a href="javascript:void(0);">disponibles au téléchargement</a>.
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div class="dash_elem empty">
+								<button class="icon" title="Ajouter un panneau">
+									<svg><use href="../resources/icons.svg#plus"></use></svg>
+									Ajouter un panneau
+								</button>
 							</div>
 						</div>
 					</div>
@@ -257,9 +421,9 @@
 					<span class="screen-reader-text">validation</span>
 				</span>
 				<span class="text">La facture EP001-190101 a été validée.</span>
-				<a href="javascript:void(0);" title="fermer cette notification" onclick="toggleOpen( this.parentNode );" class="icon close">
+				<a href="javascript:void(0);" title="Fermer cette notification" onclick="toggleOpen( this.parentNode );" class="icon close">
 					<svg><use href="../resources/icons.svg#cross"></use></svg>
-					<span class="screen-reader-text">fermer cette notification</span>
+					<span class="screen-reader-text">Fermer cette notification</span>
 				</a>
 			</li>
 		</ul>

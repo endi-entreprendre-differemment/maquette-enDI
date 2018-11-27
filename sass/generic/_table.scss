@@ -4,6 +4,8 @@ table {
 	}
 	th,
 	td {
+		font-size: 14px;
+		font-size: .875rem;
 		padding: 4px 2px;
 	}
 	td {
@@ -14,22 +16,31 @@ table {
 		a {
 			color: $black;
 			display: block;
-			text-decoration: none;
+			line-height: 1.25em;
+			text-decoration: underline;
 		}
 		a:hover,
 		a:focus,
 		a:active {
-			text-decoration: underline;
+			text-decoration: none;
 		}
 	}
 	.colActions {
 		text-align: right;
 	}
 	.colState {
-		font-size: 14px;
-		font-size: .825rem;
 		text-align: left;
 		white-space: nowrap;
+	}
+	.colNumber {
+		text-align: right;
+	}
+	.colDate {
+		width: 8em;
+	}
+	td.colState {
+		font-size: 14px;
+		font-size: .825rem;
 	}
 	tbody tr:nth-child(2n) td {
 		background: $evenOddGrey;

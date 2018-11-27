@@ -57,14 +57,19 @@ button:not(.disabled):active,
 button:not([aria-disabled='true']):active {
 	box-shadow: 0 2px 4px $midGrey;
 }
-button.icon {
+button {
 	svg {
-		margin-left: $unitPadding;
 		vertical-align: text-bottom;
 	}
-	&.only {
+	svg:first-child {
+		margin-right: $unitPadding;
+	}
+	svg:last-child {
+		margin-left: $unitPadding;
+	}
+	&.icon.only {
 		svg {
-			margin-left: 0;
+			margin: 0;
 		}
 	}
 }
