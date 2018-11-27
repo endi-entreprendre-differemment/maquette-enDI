@@ -6,7 +6,7 @@
 	.dash_elem {
 		box-shadow: 0 0 5px $darkGrey;
 		margin: $unitPadding*2;
-		width: 450px;
+		width: calc( 50% - 20px);
 		min-height: 250px;
 	}
 	h2 {
@@ -33,17 +33,24 @@
 		width: calc( 100% - 10px );
 	}
 }
-@media (min-width: 1280px) {
+// @media (min-width: 1280px) {
+// 	.dashboard {
+// 		.dash_elem {
+// 			width: calc( 50vw - 195px);
+// 		}
+// 	}
+// }
+// @media (min-width: 1025px) {
+// 	.dashboard {
+// 		.dash_elem {
+// 			width: calc( 50vw - 170px);
+// 		}
+// 	}
+// }
+@media (max-width: 1024px) {
 	.dashboard {
 		.dash_elem {
-			width: 450px;
-		}
-	}
-}
-@media (min-width: 1025px) {
-	.dashboard {
-		.dash_elem {
-			width: 400px;
+			width: calc( 100% - 20px);
 		}
 	}
 }

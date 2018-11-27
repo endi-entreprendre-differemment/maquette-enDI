@@ -89,25 +89,109 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td class="colText">EP001-190101</td>
+										<tr title="Facture - Validée">
+											<td class="colText"><a href="javascript:void(0);">EP010-190401</a></td>
 											<td class="colText">Garcia</td>
-											<td class="colState" title="Validée le 29 novembre 2018 à 17:00">
-												<span class="icon"><svg><use href="../resources/icons.svg#check"></use></svg></span> Validé
-												<span class="screen-reader-text">Validée le 29 novembre 2018 à 17:00</span>
+											<td class="colState">
+												<span class="icon state success"><svg><use href="../resources/icons.svg#check"></use></svg></span> Validé
+												<span class="screen-reader-text">Facture - Validée</span>
 											</td>
 											<td class="colActions">
-												<button type="submit" class="icon only" title="Voir le document">
-													<span class="screen-reader-text">Voir le document</span>
+												<button class="icon only" title="Voir la facture">
+													<span class="screen-reader-text">Voir la facture</span>
 													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
 												</button>
-												<button type="submit" class="icon only" title="Télécharger le document au format pdf">
-													<span class="screen-reader-text">Télécharger le document au format pdf</span>
+												<button class="icon only" title="Télécharger la facture au format pdf">
+													<span class="screen-reader-text">Télécharger la facture au format pdf</span>
+													<svg><use href="../resources/icons.svg#file-pdf"></use></svg>
+												</button>
+											</td>
+										</tr>
+										<tr title="Devis - Brouillon">
+											<td class="colText"><a href="javascript:void(0);">EP008-190101</a></td>
+											<td class="colText">Meunier</td>
+											<td class="colState">
+												<span class="icon state draft"><svg><use href="../resources/icons.svg#edit"></use></svg></span> Brouillon
+												<span class="screen-reader-text">Devis - Brouillon</span>
+											</td>
+											<td class="colActions">
+												<button class="icon only" title="Voir le devis">
+													<span class="screen-reader-text">Voir le devis</span>
+													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
+												</button>
+												<button class="icon only" title="Télécharger le devis au format pdf">
+													<span class="screen-reader-text">Télécharger le devis au format pdf</span>
+													<svg><use href="../resources/icons.svg#file-pdf"></use></svg>
+												</button>
+											</td>
+										</tr>
+										<tr title="Devis - Refusé">
+											<td class="colText"><a href="javascript:void(0);">EP027-181222</a></td>
+											<td class="colText">Garcia</td>
+											<td class="colState">
+												<span class="icon state invalid"><svg><use href="../resources/icons.svg#cross"></use></svg></span> Refusé
+												<span class="screen-reader-text">Devis - Refusé</span>
+											</td>
+											<td class="colActions">
+												<button class="icon only" title="Voir le devis">
+													<span class="screen-reader-text">Voir le devis</span>
+													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
+												</button>
+												<button class="icon only" title="Télécharger le devis au format pdf">
+													<span class="screen-reader-text">Télécharger le devis au format pdf</span>
+													<svg><use href="../resources/icons.svg#file-pdf"></use></svg>
+												</button>
+											</td>
+										</tr>
+										<tr title="Facture - Non payée depuis moins de 45 jours">
+											<td class="colText"><a href="javascript:void(0);">EP022-181205</a></td>
+											<td class="colText">Garcia</td>
+											<td class="colState">
+												<span class="icon state unpaid"><svg><use href="../resources/icons.svg#euro"></use></svg></span> Non Payé
+												<span class="screen-reader-text">Facture - Non payée</span>
+											</td>
+											<td class="colActions">
+												<button class="icon only" title="Voir la facture">
+													<span class="screen-reader-text">Voir la facture</span>
+													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
+												</button>
+												<button class="icon only" title="Télécharger la facture au format pdf">
+													<span class="screen-reader-text">Télécharger la facture au format pdf</span>
+													<svg><use href="../resources/icons.svg#file-pdf"></use></svg>
+												</button>
+											</td>
+										</tr>
+										<tr title="Facture - Partiellement payée">
+											<td class="colText"><a href="javascript:void(0);">EP021-181125</a></td>
+											<td class="colText">Meunier</td>
+											<td class="colState">
+												<span class="icon state partial_unpaid"><svg><use href="../resources/icons.svg#euro"></use></svg></span> Partiellement Payé
+												<span class="screen-reader-text">Facture - Non payée</span>
+											</td>
+											<td class="colActions">
+												<button class="icon only" title="Voir la facture">
+													<span class="screen-reader-text">Voir la facture</span>
+													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
+												</button>
+												<button class="icon only" title="Télécharger la facture au format pdf">
+													<span class="screen-reader-text">Télécharger la facture au format pdf</span>
 													<svg><use href="../resources/icons.svg#file-pdf"></use></svg>
 												</button>
 											</td>
 										</tr>
 									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="4" class="colActions">
+												<button>
+													Nouvelle facture
+												</button>
+												<button>
+													Nouveau devis
+												</button>
+											</td>
+										</tr>
+									</tfoot>
 								</table>
 							</div>
 							<div class="dash_elem">
@@ -136,7 +220,7 @@
 												29/11/2018
 											</td>
 											<td class="colActions">
-												<button type="submit" class="icon only" title="Voir le document">
+												<button class="icon only" title="Voir le document">
 													<span class="screen-reader-text">Voir le document</span>
 													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
 												</button>

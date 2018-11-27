@@ -1,6 +1,6 @@
 table {
 	th {
-		background: $fadedGrey;
+		background: $veryFadedGrey;
 	}
 	th,
 	td {
@@ -11,11 +11,30 @@ table {
 	}
 	.colText {
 		text-align: left;
+		a {
+			color: $black;
+			display: block;
+			text-decoration: none;
+		}
+		a:hover,
+		a:focus,
+		a:active {
+			text-decoration: underline;
+		}
 	}
 	.colActions {
 		text-align: right;
 	}
 	.colState {
+		font-size: 14px;
+		font-size: .825rem;
+		text-align: left;
 		white-space: nowrap;
+	}
+	tbody tr:nth-child(2n) td {
+		background: $evenOddGrey;
+	}
+	tfoot tr:first-child td {
+		border-top: 1px solid $veryFadedGrey;
 	}
 }

@@ -34,19 +34,47 @@ a:focus,
 a:active {
 	text-decoration: none;
 }
-.icon > svg {
-	height: 16px;
-	pointer-events: none;
-	vertical-align: text-top;
-	width: 16px;
-	title {
-		display: none;
+.icon {
+	font-size: 16px;
+	font-size: 1rem;
+	> svg {
+		height: 16px;
+		pointer-events: none;
+		vertical-align: text-top;
+		width: 16px;
+		title {
+			display: none;
+		}
 	}
 }
 a.icon:hover > svg,
 a.icon:focus > svg,
 a.icon:active > svg {
 	fill: $lightGreen;
+}
+.icon.state {
+	border-radius: 4px;
+	padding: 5px 4px 4px;
+	svg {
+		fill: $white;
+	}
+	&.success {
+		background: $funcPositive;
+	}
+	&.caution,
+	&.unpaid {
+		background: $funcCaution;
+	}
+	&.partial_unpaid {
+		background: linear-gradient(160deg, $funcPositive 0%, $funcPositive 50%, $funcCaution 51%, $funcCaution 100%); 
+	}
+	&.error,
+	&.invalid {
+		background: $funcNegative;
+	}
+	&.draft {
+		background: $midGrey;
+	}
 }
 
 

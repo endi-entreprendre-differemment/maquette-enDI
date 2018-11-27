@@ -392,7 +392,7 @@ div.main_area {
       width: 12px; }
 
 table th {
-  background: rgba(128, 128, 128, 0.2); }
+  background: rgba(128, 128, 128, 0.1); }
 table th,
 table td {
   padding: 4px 2px; }
@@ -400,10 +400,25 @@ table td {
   text-align: center; }
 table .colText {
   text-align: left; }
+  table .colText a {
+    color: black;
+    display: block;
+    text-decoration: none; }
+  table .colText a:hover,
+  table .colText a:focus,
+  table .colText a:active {
+    text-decoration: underline; }
 table .colActions {
   text-align: right; }
 table .colState {
+  font-size: 14px;
+  font-size: .825rem;
+  text-align: left;
   white-space: nowrap; }
+table tbody tr:nth-child(2n) td {
+  background: rgba(128, 128, 128, 0.05); }
+table tfoot tr:first-child td {
+  border-top: 1px solid rgba(128, 128, 128, 0.1); }
 
 @font-face {
   font-family: 'Chivo';
@@ -502,7 +517,7 @@ h6 {
   .dashboard .dash_elem {
     box-shadow: 0 0 5px #757575;
     margin: 10px;
-    width: 450px;
+    width: calc( 50% - 20px);
     min-height: 250px; }
   .dashboard h2 {
     padding: 10px 5px; }
@@ -522,12 +537,9 @@ h6 {
     margin: 10px 5px;
     width: calc( 100% - 10px ); }
 
-@media (min-width: 1280px) {
+@media (max-width: 1024px) {
   .dashboard .dash_elem {
-    width: 450px; } }
-@media (min-width: 1025px) {
-  .dashboard .dash_elem {
-    width: 400px; } }
+    width: calc( 100% - 20px); } }
 .theme_default .dashboard h2 {
   background: rgba(128, 128, 128, 0.2); }
 
@@ -632,18 +644,37 @@ a:focus,
 a:active {
   text-decoration: none; }
 
-.icon > svg {
-  height: 16px;
-  pointer-events: none;
-  vertical-align: text-top;
-  width: 16px; }
-  .icon > svg title {
-    display: none; }
+.icon {
+  font-size: 16px;
+  font-size: 1rem; }
+  .icon > svg {
+    height: 16px;
+    pointer-events: none;
+    vertical-align: text-top;
+    width: 16px; }
+    .icon > svg title {
+      display: none; }
 
 a.icon:hover > svg,
 a.icon:focus > svg,
 a.icon:active > svg {
   fill: #1de67e; }
+
+.icon.state {
+  border-radius: 4px;
+  padding: 5px 4px 4px; }
+  .icon.state svg {
+    fill: white; }
+  .icon.state.success {
+    background: #008951; }
+  .icon.state.caution, .icon.state.unpaid {
+    background: #ff9600; }
+  .icon.state.partial_unpaid {
+    background: linear-gradient(160deg, #008951 0%, #008951 50%, #ff9600 51%, #ff9600 100%); }
+  .icon.state.error, .icon.state.invalid {
+    background: #e11400; }
+  .icon.state.draft {
+    background: gray; }
 
 .screen-reader-text {
   border: 0;
