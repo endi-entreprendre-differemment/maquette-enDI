@@ -48,12 +48,24 @@
 		</div>
 		<div class="base_content layout flex">
 			<header id="demo_main_header" class="main_header" role="banner">
-				<p class="breadcrumbs">
-					enDI > Tableau de bord
-				</p>
-				<h1>
-					Tableau de bord
-				</h1>
+				<div class="header_content layout flex">
+					<div>
+						<p class="breadcrumbs">
+							enDI > Tableau de bord
+						</p>
+						<h1>
+							Tableau de bord
+						</h1>
+					</div>
+					<ul class="tools">
+						<li>
+							<a href="javascript:void(0);" onclick="showNotifs();" title="2 notifications" class="icon">
+								<svg><use href="../resources/icons.svg#bell"></use></svg>
+								<span class="bubble">2</span><span class="screen-reader-text"> notifications</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</header>
 			<div class="main_area">
 				<main id="target_content" class="" role="main">
@@ -412,15 +424,24 @@
 			</div>
 		</div>
 	</div>
-	<div class="notifications">
+	<div id="notifications" class="notifications">
 		<h2 class="screen-reader-text">Notifications</h2>
 		<ul>
 			<li class="success">
-				<span class="icon" title="validation">
+				<span class="icon">
 					<svg><use href="../resources/icons.svg#check"></use></svg>
-					<span class="screen-reader-text">validation</span>
 				</span>
-				<span class="text">La facture EP001-190101 a été validée.</span>
+				<span class="text">La facture EP001-190401 a été validée.</span>
+				<a href="javascript:void(0);" title="Fermer cette notification" onclick="toggleOpen( this.parentNode );" class="icon close">
+					<svg><use href="../resources/icons.svg#cross"></use></svg>
+					<span class="screen-reader-text">Fermer cette notification</span>
+				</a>
+			</li>
+			<li class="neutral">
+				<span class="icon">
+					<svg><use href="../resources/icons.svg#clock"></use></svg>
+				</span>
+				<span class="text">Vous avez rendez-vous avec Cécile Legrand demain.</span>
 				<a href="javascript:void(0);" title="Fermer cette notification" onclick="toggleOpen( this.parentNode );" class="icon close">
 					<svg><use href="../resources/icons.svg#cross"></use></svg>
 					<span class="screen-reader-text">Fermer cette notification</span>

@@ -112,6 +112,18 @@ button.icon.only svg {
     background: #008951 !important; }
   .main_header.negative {
     background: #e11400 !important; }
+  .main_header .header_content {
+    justify-content: space-between; }
+  .main_header ul.tools {
+    list-style-type: none;
+    margin-right: -10px;
+    padding-top: 10px; }
+    .main_header ul.tools a {
+      color: white; }
+      .main_header ul.tools a svg {
+        fill: white;
+        height: 32px;
+        width: 32px; }
 
 .theme_default .main_header {
   background: #757575; }
@@ -351,11 +363,10 @@ div.main_area {
     border-left: 5px solid white;
     box-shadow: 0 0 1px white, 0 0 5px black;
     display: flex;
+    justify-content: space-between;
     margin: 5px; }
-    .notifications li[class] span.icon {
-      margin-left: -5px; }
-      .notifications li[class] span.icon svg {
-        fill: white; }
+    .notifications li[class] span.icon svg {
+      fill: white; }
     .notifications li.success {
       border-left-color: #008951; }
       .notifications li.success span.icon {
@@ -373,12 +384,14 @@ div.main_area {
       .notifications li.neutral span.icon {
         background: #007ab1; }
     .notifications li .text {
-      padding: 5px 10px; }
+      padding: 5px 10px;
+      width: calc( 100% - 58px ); }
     .notifications li:not(.open) {
       display: none; }
   .notifications span {
     display: inline-block; }
   .notifications span.icon {
+    flex: 0 0 auto;
     height: 48px;
     width: 48px; }
     .notifications span.icon svg {
@@ -391,6 +404,12 @@ div.main_area {
     .notifications .close svg {
       fill: black; }
 
+@media (max-width: 600px) {
+  .notifications li {
+    max-width: 100vw; } }
+@media (min-width: 601px) {
+  .notifications li {
+    max-width: 50vw; } }
 table th {
   background: rgba(128, 128, 128, 0.1); }
 table th,
@@ -677,8 +696,10 @@ a:active {
   text-decoration: none; }
 
 .icon {
+  display: inline-block;
   font-size: 16px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  position: relative; }
   .icon > svg {
     height: 16px;
     pointer-events: none;
@@ -690,6 +711,19 @@ a:active {
     height: 12px;
     margin: 6px;
     width: 12px; }
+  .icon .bubble {
+    background: #e11400;
+    border-radius: 50%;
+    bottom: -3px;
+    box-shadow: 0 1px 1px black;
+    display: inline-block;
+    color: white;
+    height: 1.5em;
+    line-height: 1.5em;
+    position: absolute;
+    right: -3px;
+    text-align: center;
+    width: 1.5em; }
 
 a.icon:hover > svg,
 a.icon:focus > svg,

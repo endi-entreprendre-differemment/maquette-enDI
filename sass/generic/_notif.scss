@@ -11,10 +11,10 @@
 		border-left: 5px solid $white;
 		box-shadow: 0 0 1px $white, 0 0 5px $black;
 		display: flex;
+		justify-content: space-between;
 		margin: 5px;
 		&[class] {
 			span.icon {
-				margin-left: -5px;
 				svg {
 					fill: $white;
 				}
@@ -46,6 +46,7 @@
 		}
 		.text {
 			padding: $unitPadding $unitPadding*2;
+			width: calc( 100% - 58px );
 		}
 		&:not(.open) {
 			display: none;
@@ -55,6 +56,7 @@
 		display: inline-block;
 	}
 	span.icon{
+		flex: 0 0 auto;
 		height: 48px;
 		width: 48px;
 		svg {
@@ -69,5 +71,15 @@
 		svg {
 			fill: $black;
 		}
+	}
+}
+@media (max-width: 600px) {
+	.notifications li {
+		max-width: 100vw;
+	}
+}
+@media (min-width: 601px) {
+	.notifications li {
+		max-width: 50vw;
 	}
 }

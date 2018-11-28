@@ -89,3 +89,11 @@ function toggleOpen( whichObject ) {
 		addClass( object, 'open' );
 	}
 }
+
+function showNotifs() {
+	var notifDiv = document.getElementById('notifications');
+	var notifItems = notifDiv.getElementsByTagName('LI');
+	for ( i = 0; i < notifItems.length; i ++) {
+		toggleOpen( notifItems[i] );
+	}
+}

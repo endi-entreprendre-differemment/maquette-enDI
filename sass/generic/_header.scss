@@ -18,6 +18,22 @@
 	&.negative {
 		background: $funcNegative !important;
 	}
+	.header_content {
+		justify-content: space-between;
+	}
+	ul.tools {
+		list-style-type: none;
+		margin-right: -10px;
+		padding-top: 10px;
+		a {
+			color: $white;
+			svg {
+				fill: $white;
+				height: 32px;
+				width: 32px;
+			}
+		}
+	}
 }
 .theme_default .main_header {
 	background: $darkGrey;
