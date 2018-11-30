@@ -43,6 +43,8 @@
 	}
 	header {
 		font-weight: bold;
+		position: relative;
+		width: 100%;
 		.user_avatar {
 			background: $darkGrey;
 			border-radius: 50%;
@@ -66,6 +68,25 @@
 		a:focus,
 		a:active {
 			text-decoration: underline;
+		}
+		.icon.theme {
+			background: $fadedGrey;
+			display: none;
+			height: 40px;
+			position: absolute;
+			right: 0;
+			top: 14px;
+			width: 40px;
+			z-index: 10;
+			svg {
+				fill: $white;
+				height: 32px;
+				margin: 4px;
+				width: 32px;
+			}
+		}
+		ul {
+			z-index: 5;
 		}
 	}
 	nav ul {
@@ -118,7 +139,8 @@
 		.base_menu {
 			margin-left: -210px;
 			nav,
-			header,
+			header .user_avatar,
+			header a,
 			footer {
 				visibility: hidden;
 			}
@@ -157,10 +179,11 @@
 		display: none;
 	}
 	.base_menu {
-		margin-left: -258px;
+		margin-left: -260px;
 		width: 300px;
 		nav,
-		header,
+// 		header .user_avatar,
+// 		header a,
 		footer {
 			opacity: 0;
 			transition: opacity .25s .1s ease-out;
@@ -171,7 +194,7 @@
 	}
 	.base_menu.open {
 		margin-left: 0;
-		margin-right: -258px;
+		margin-right: -260px;
 		z-index: 10;
 		nav,
 		header,
@@ -184,44 +207,60 @@
 	header .user_avatar {
 		background: $darkGrey;
 	}
-	nav ul {
-		a:hover,
-		a:focus {
-			background: $darkGrey;
-		}
-		a:active,
-		li.current_item > a {
-			border-color: $darkGrey;
+	nav {
+		ul {
+			a:hover,
+			a:focus {
+				background: $darkGrey;
+			}
+			a:active,
+			li.current_item > a {
+				border-color: $darkGrey;
+			}
 		}
 	}
 }
 .theme_manage_people .base_menu {
-	header .user_avatar {
-		background: $darkBlue;
-	}
-	nav ul {
-		a:hover,
-		a:focus {
+	header {
+		.user_avatar {
 			background: $darkBlue;
 		}
-		a:active,
-		li.current_item > a {
-			border-color: $darkBlue;
+		.icon.theme.people {
+			display: block;
+		}
+	}
+	nav {
+		ul {
+			a:hover,
+			a:focus {
+				background: $darkBlue;
+			}
+			a:active,
+			li.current_item > a {
+				border-color: $darkBlue;
+			}
 		}
 	}
 }
 .theme_manage_entity .base_menu {
-	header .user_avatar {
-		background: $darkGreen;
-	}
-	nav ul {
-		a:hover,
-		a:focus {
+	header {
+		.user_avatar {
 			background: $darkGreen;
 		}
-		a:active,
-		li.current_item > a {
-			border-color: $darkGreen;
+		.icon.theme.entity {
+			display: block;
+		}
+	}
+	nav {
+		ul {
+			a:hover,
+			a:focus {
+				background: $darkGreen;
+			}
+			a:active,
+			li.current_item > a {
+				border-color: $darkGreen;
+			}
 		}
 	}
 }

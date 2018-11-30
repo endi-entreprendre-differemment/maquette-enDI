@@ -314,7 +314,9 @@ div.main_area {
       margin: 4px;
       width: 24px; }
   .base_menu header {
-    font-weight: bold; }
+    font-weight: bold;
+    position: relative;
+    width: 100%; }
     .base_menu header .user_avatar {
       background: #757575;
       border-radius: 50%;
@@ -335,6 +337,22 @@ div.main_area {
     .base_menu header a:focus,
     .base_menu header a:active {
       text-decoration: underline; }
+    .base_menu header .icon.theme {
+      background: rgba(128, 128, 128, 0.2);
+      display: none;
+      height: 40px;
+      position: absolute;
+      right: 0;
+      top: 14px;
+      width: 40px;
+      z-index: 10; }
+      .base_menu header .icon.theme svg {
+        fill: white;
+        height: 32px;
+        margin: 4px;
+        width: 32px; }
+    .base_menu header ul {
+      z-index: 5; }
   .base_menu nav ul {
     list-style-type: none;
     width: 100%; }
@@ -370,7 +388,8 @@ div.main_area {
   body.menu_mini .base_menu {
     margin-left: -210px; }
     body.menu_mini .base_menu nav,
-    body.menu_mini .base_menu header,
+    body.menu_mini .base_menu header .user_avatar,
+    body.menu_mini .base_menu header a,
     body.menu_mini .base_menu footer {
       visibility: hidden; }
   body.menu_mini .menu_tools .menu_size.maxi {
@@ -397,10 +416,9 @@ div.main_area {
     display: none; }
 
   .base_menu {
-    margin-left: -258px;
+    margin-left: -260px;
     width: 300px; }
     .base_menu nav,
-    .base_menu header,
     .base_menu footer {
       opacity: 0;
       transition: opacity .25s .1s ease-out; }
@@ -409,7 +427,7 @@ div.main_area {
 
   .base_menu.open {
     margin-left: 0;
-    margin-right: -258px;
+    margin-right: -260px;
     z-index: 10; }
     .base_menu.open nav,
     .base_menu.open header,
@@ -426,6 +444,8 @@ div.main_area {
 
 .theme_manage_people .base_menu header .user_avatar {
   background: #005c98; }
+.theme_manage_people .base_menu header .icon.theme.people {
+  display: block; }
 .theme_manage_people .base_menu nav ul a:hover,
 .theme_manage_people .base_menu nav ul a:focus {
   background: #005c98; }
@@ -435,6 +455,8 @@ div.main_area {
 
 .theme_manage_entity .base_menu header .user_avatar {
   background: #066243; }
+.theme_manage_entity .base_menu header .icon.theme.entity {
+  display: block; }
 .theme_manage_entity .base_menu nav ul a:hover,
 .theme_manage_entity .base_menu nav ul a:focus {
   background: #066243; }
