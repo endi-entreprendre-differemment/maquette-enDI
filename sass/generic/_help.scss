@@ -1,15 +1,86 @@
 div.context_help {
+	.help_tools {
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+	}
+}
+body.help_mini {
+	.help_content {
+		display: none;
+	}
 }
 @media ( min-width: 1200px ) {
-	div.context_help {
-		border-left: $simpleLine dashed $fadedGrey;
-		padding: $contentVerPadding;
-		min-width: 150px;
-		max-width: 300px;
-		overflow: auto;
-		position: sticky;
-		right: 0;
-		top: 0;
+	body:not(.help_bottom) {
+		div.context_help {
+			border-left: $simpleLine dashed $fadedGrey;
+			padding: $contentVerPadding;
+			min-width: 150px;
+			max-width: 300px;
+			overflow: auto;
+			position: sticky;
+			right: 0;
+			top: 0;
+			.help_tools {
+				justify-content: space-between;
+				.help_side,
+				.help_mini_bottom,
+				.help_maxi {
+					display: none;
+				}
+			}
+		}
+		&.help_mini {
+			div.context_help {
+				min-width: 32px;
+				width: 32px;
+				overflow: hidden;
+				.help_tools {
+					flex-wrap: wrap;
+					.help_mini,
+					.help_maxi_bottom {
+						display: none;
+					}
+					.help_maxi {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	body.help_bottom {
+		div.context_help {
+			border-top: $simpleLine dashed $fadedGrey;
+			padding: $contentVerPadding $contentHorPadding;
+			width: 100%;
+			.help_tools {
+				justify-content: flex-end;
+				.help_bottom,
+				.help_mini_side,
+				.help_maxi {
+					display: none;
+				}
+				li {
+					text-align: right;
+					width: 32px;
+				}
+			}
+		}
+		&.help_mini {
+			div.context_help {
+				height: 32px;
+				overflow: hidden;
+				.help_tools {
+					.help_mini,
+					.help_maxi_side {
+						display: none;
+					}
+					.help_maxi {
+						display: block;
+					}
+				}
+			}
+		}
 	}
 }
 @media ( max-width: 1200px ) {
@@ -17,5 +88,29 @@ div.context_help {
 		border-top: $simpleLine dashed $fadedGrey;
 		padding: $contentVerPadding $contentHorPadding;
 		width: 100%;
+		.help_tools {
+			justify-content: flex-end;
+			.help_bottom,
+			.help_side,
+			.help_mini_side,
+			.help_maxi_side,
+			.help_maxi {
+				display: none;
+			}
+		}
+	}
+	body.help_mini {
+		div.context_help {
+			height: 32px;
+			overflow: hidden;
+			.help_tools {
+				.help_mini{
+					display: none;
+				}
+				.help_maxi {
+					display: block;
+				}
+			}
+		}
 	}
 }

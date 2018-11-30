@@ -1,7 +1,11 @@
 .main_area {
 	height: calc( 100vh - 75px );
+	transition: width .25s ease-out;
 	> main {
 		flex: 1 0 auto;
+		&:only-child {
+			max-width: 100%;
+		}
 	}
 }
 .main_actions {
@@ -15,20 +19,23 @@
 .main_content {
 	padding: $contentVerPadding*2 $contentHorPadding;
 }
-@media ( min-width: 1200px ) {
-// 	.main_area {
-// 		display: flex;
-// 	}
-}
 
-@media (min-width: 1280px) {
-	.main_area {
-		width: calc( 100vw - 300px );
-	}
-}
 @media (min-width: 1025px) {
 	.main_area {
 		width: calc( 100vw - 250px );
+	}
+	body.menu_mini {
+		.main_area {
+			width: calc( 100vw - 40px );
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.main_area {
+		width: calc( 100vw - 300px );
+	}
+	body:not(.help_bottom) .main_area {
+		display: flex;
 	}
 }
 @media (max-width: 1024px) {

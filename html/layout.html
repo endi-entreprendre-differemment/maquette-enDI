@@ -7,18 +7,39 @@
 	<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen,projection,print">
 </head>
 <body class="theme_default">
+<!-- 
+classes possibles sur le body :
+- theme_default (palette par défaut) | theme_manage_people (palette gestion des personnes) | theme_manage_entity (palette gestion des enseignes)
+- menu_mini (menu minimisé) - sans classe le menu est maximisé
+- help_mini (aide contextuelle minimisée) - sans classe l’aide contextuelle est maximisée
+- help_side (aide contextuelle en bas d’écran) | help_bottom (aide contextuelle sur le côté droit de l’écran) - sans classe l’aide contextuelle est positionnée automatiquement
+ -->
 	<div class="base_layout layout flex screen">
 		<div id="demo_base_menu" class="base_menu flex">
 			<p class="access_tools" role="navigation" aria-label="page">
 				<a href="#target_content">aller au contenu</a>
 				<a href="#target_menu">au menu</a>
 			</p>
-			<div class="menu_tools">
-				<a href="javascript:void(0);" onclick="toggleOpen('demo_base_menu');" title="afficher le menu" class="icon menu">
-					<svg><use href="../resources/icons.svg#menu"></use></svg>
-					<span class="screen-reader-text">afficher le menu</span>
-				</a>
-			</div>
+			<ul class="menu_tools">
+				<li class="menu">
+					<a href="javascript:void(0);" onclick="toggleOpen('demo_base_menu');" title="afficher le menu" class="icon">
+						<svg><use href="../resources/icons.svg#menu"></use></svg>
+						<span class="screen-reader-text">afficher le menu</span>
+					</a>
+				</li>
+				<li class="menu_size mini">
+					<a href="javascript:void(0);" onclick="resize('menu');" title="minimiser le menu" class="icon">
+						<svg><use href="../resources/icons.svg#arrow-triangle-left"></use></svg>
+						<span class="screen-reader-text">minimiser le menu</span>
+					</a>
+				</li>
+				<li class="menu_size maxi">
+					<a href="javascript:void(0);" onclick="resize('menu');" title="maximiser le menu" class="icon menu_size">
+						<svg><use href="../resources/icons.svg#arrow-triangle-right"></use></svg>
+						<span class="screen-reader-text">maximiser le menu</span>
+					</a>
+				</li>
+			</ul>
 			<header>
 				<span class="user_avatar">
 					<svg><use href="../resources/icons.svg#user"></use></svg>
@@ -61,7 +82,7 @@
 						<li>
 							<a href="javascript:void(0);" onclick="showNotifs();" title="2 notifications" class="icon">
 								<svg><use href="../resources/icons.svg#bell"></use></svg>
-								<span class="bubble">2</span><span class="screen-reader-text"> notifications</span>
+								<span class="bubble">1</span><span class="screen-reader-text"> notification</span>
 							</a>
 						</li>
 					</ul>
@@ -84,11 +105,8 @@
 						<div>
 							Filtres (optionnel)
 						</div>
-						<div style="height: 100vh;">
+						<div style="height: 75vh;">
 							Contenu…
-							<p>
-								Test avec scroll
-							</p>
 							<h5>Palettes</h5>
 							<ul>
 								<li><a href="javascript:void(0);" onclick="colourScheme( 'theme_default' );">Base</a></li>
@@ -99,7 +117,37 @@
 					</div>
 				</main>
 				<div class="context_help" role="complementary">
-					Aide contextuelle (optionnel)
+					<ul class="help_tools">
+						<li class="help_mini">
+							<a href="javascript:void(0);" onclick="resize('help');" title="minimiser l’aide contextuelle" class="icon">
+								<svg class="help_mini_side"><use href="../resources/icons.svg#arrow-triangle-right"></use></svg>
+								<svg class="help_mini_bottom"><use href="../resources/icons.svg#arrow-triangle-down"></use></svg>
+								<span class="screen-reader-text">minimiser l’aide contextuelle</span>
+							</a>
+						</li>
+						<li class="help_maxi">
+							<a href="javascript:void(0);" onclick="resize('help');" title="maximiser l’aide contextuelle" class="icon">
+								<svg class="help_maxi_side"><use href="../resources/icons.svg#arrow-triangle-left"></use></svg>
+								<svg class="help_maxi_bottom"><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
+								<span class="screen-reader-text">maximiser l’aide contextuelle</span>
+							</a>
+						</li>
+						<li class="help_side">
+							<a href="javascript:void(0);" onclick="toggleHelp('help_side');" title="afficher l’aide contextuelle sur le côté" class="icon">
+								<svg><use href="../resources/icons.svg#position-side"></use></svg>
+								<span class="screen-reader-text">afficher l’aide contextuelle sur le côté</span>
+							</a>
+						</li>
+						<li class="help_bottom">
+							<a href="javascript:void(0);" onclick="toggleHelp('help_bottom');" title="afficher l’aide contextuelle en bas" class="icon">
+								<svg><use href="../resources/icons.svg#position-down"></use></svg>
+								<span class="screen-reader-text">afficher l’aide contextuelle en bas</span>
+							</a>
+						</li>
+					</ul>
+					<div class="help_content">
+						Aide contextuelle (optionnel)
+					</div>
 				</div>
 			</div>
 		</div>

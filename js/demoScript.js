@@ -97,3 +97,27 @@ function showNotifs() {
 		toggleOpen( notifItems[i] );
 	}
 }
+
+function resize(object) {
+	var targetClass = object + "_mini";
+	if( hasClass( document.body, targetClass )) {
+		removeClass( document.body, targetClass );
+	}
+	else {
+		addClass( document.body, targetClass );
+	}
+}
+
+function toggleHelp(position) {
+	if( position == 'help_bottom' ) {
+		if( hasClass( document.body, 'help_side' ) ) {
+			removeClass( document.body , 'help_side' );
+		}
+	}
+	else if( position == 'help_side' ) {
+		if( hasClass( document.body, 'help_bottom' ) ) {
+			removeClass( document.body , 'help_bottom' );
+		}
+	}
+	addClass( document.body , position );
+}

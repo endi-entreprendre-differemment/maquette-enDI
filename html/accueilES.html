@@ -13,12 +13,26 @@
 				<a href="#target_content">aller au contenu</a>
 				<a href="#target_menu">au menu</a>
 			</p>
-			<div class="menu_tools">
-				<a href="javascript:void(0);" onclick="toggleOpen('demo_base_menu');" title="afficher le menu" class="icon menu">
-					<svg><use href="../resources/icons.svg#menu"></use></svg>
-					<span class="screen-reader-text">afficher le menu</span>
-				</a>
-			</div>
+			<ul class="menu_tools">
+				<li class="menu">
+					<a href="javascript:void(0);" onclick="toggleOpen('demo_base_menu');" title="afficher le menu" class="icon">
+						<svg><use href="../resources/icons.svg#menu"></use></svg>
+						<span class="screen-reader-text">afficher le menu</span>
+					</a>
+				</li>
+				<li class="menu_size mini">
+					<a href="javascript:void(0);" onclick="resize('menu');" title="minimiser le menu" class="icon">
+						<svg><use href="../resources/icons.svg#arrow-triangle-left"></use></svg>
+						<span class="screen-reader-text">minimiser le menu</span>
+					</a>
+				</li>
+				<li class="menu_size maxi">
+					<a href="javascript:void(0);" onclick="resize('menu');" title="maximiser le menu" class="icon menu_size">
+						<svg><use href="../resources/icons.svg#arrow-triangle-right"></use></svg>
+						<span class="screen-reader-text">maximiser le menu</span>
+					</a>
+				</li>
+			</ul>
 			<header>
 				<span class="user_avatar">
 					<svg><use href="../resources/icons.svg#user"></use></svg>
