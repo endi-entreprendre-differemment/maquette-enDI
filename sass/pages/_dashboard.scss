@@ -61,20 +61,22 @@
 			align-items: center;
 			display: flex;
 			flex-wrap: wrap;
+			font-size: 14px;
+			font-size: .875rem;
 			justify-content: center;
 			a {
 				background: $lightGreen;
 				color: $black;
 				display: block;
-				height: 160px;
+				height: 144px;
 				margin: 16px;
 				text-align: center;
 				text-decoration: none;
-				width: 160px;
+				width: 144px;
 				svg {
 					height: 64px;
 					fill: $black;
-					margin: 24px 32px 24px;
+					margin: 24px 40px 12px;
 					width: 64px;
 				}
 				&:hover,

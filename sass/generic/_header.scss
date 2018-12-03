@@ -22,9 +22,13 @@
 		justify-content: space-between;
 	}
 	ul.tools {
+		display: flex;
 		list-style-type: none;
 		margin-right: -10px;
 		padding-top: 10px;
+		li {
+			margin-left: 20px;
+		}
 		a {
 			color: $white;
 			svg {

@@ -81,6 +81,12 @@
 					</div>
 					<ul class="tools">
 						<li>
+							<a href="javascript:void(0);" title="Paramètres de cet écran" class="icon">
+								<svg><use href="../resources/icons.svg#settings"></use></svg>
+								<span class="screen-reader-text">Paramètres de cet écran</span>
+							</a>
+						</li>
+						<li>
 							<a href="javascript:void(0);" onclick="showNotifs();" title="2 notifications" class="icon">
 								<svg><use href="../resources/icons.svg#bell"></use></svg>
 								<span class="bubble">2</span><span class="screen-reader-text"> notifications</span>
@@ -256,6 +262,7 @@
 											</td>
 										</tr>
 									</tbody>
+<!-- 
 									<tfoot>
 										<tr>
 											<td colspan="4" class="colActions">
@@ -268,6 +275,7 @@
 											</td>
 										</tr>
 									</tfoot>
+ -->
 								</table>
 							</div>
 							<div class="dash_elem">
@@ -281,6 +289,16 @@
 										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
 									</a>
 								</h2>
+								<form>
+									<div class="layout flex search_form">
+										<label for="cal_search" class="screen-reader-text">Rechercher par titre, nom d’accompagnant ou type d’événement</label>
+										<input type="text" id="cal_search" placeholder="titre, nom, type" title="Rechercher par titre, nom d’accompagnant ou type d’événement">
+										<button type="submit" class="icon only" title="Rechercher">
+											<svg><use href="../resources/icons.svg#search"></use></svg>
+											<span class="screen-reader-text">Rechercher</span>
+										</button>
+									</div>
+								</form>
 								<table>
 									<thead>
 										<tr>

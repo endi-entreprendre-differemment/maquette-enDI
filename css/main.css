@@ -218,9 +218,12 @@ progress:not([value])::-webkit-progress-value {
   .main_header .header_content {
     justify-content: space-between; }
   .main_header ul.tools {
+    display: flex;
     list-style-type: none;
     margin-right: -10px;
     padding-top: 10px; }
+    .main_header ul.tools li {
+      margin-left: 20px; }
     .main_header ul.tools a {
       color: white; }
       .main_header ul.tools a svg {
@@ -802,20 +805,22 @@ h6 {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
+      font-size: 14px;
+      font-size: .875rem;
       justify-content: center; }
       .dashboard ul.favourites a {
         background: #1de67e;
         color: black;
         display: block;
-        height: 160px;
+        height: 144px;
         margin: 16px;
         text-align: center;
         text-decoration: none;
-        width: 160px; }
+        width: 144px; }
         .dashboard ul.favourites a svg {
           height: 64px;
           fill: black;
-          margin: 24px 32px 24px;
+          margin: 24px 40px 12px;
           width: 64px; }
         .dashboard ul.favourites a:hover, .dashboard ul.favourites a:focus, .dashboard ul.favourites a:active {
           box-shadow: 0 2px 4px gray; }
