@@ -18,16 +18,24 @@
 		}
 	}
 	h2 {
-		padding: $unitPadding*2 $unitPadding;
+		border-bottom: 1px solid $veryFadedGrey;
 		position: relative;
-		.icon:first-child svg {
-			height: 24px;
-			margin: 0 5px;
-			vertical-align: text-bottom;
-			width: 24px;
+		.icon:first-child {
+			height: 2.5em;
+			display: inline-block;
+			margin-right: 5px;
+			vertical-align: -.8em;
+			width: 2.5em;
+			svg {
+				display: block;
+				fill: $white;
+				height: 1.5em;
+				margin: .5em;
+				width: 1.5em;
+			}
 		}
 		.icon.close {
-			right: $unitPadding*2;
+			right: 0;
 			position: absolute;
 		}
 	}
@@ -77,17 +85,17 @@
 	}
 }
 .theme_default .dashboard {
-	h2 {
-		background: $fadedGrey;
+	h2 .icon:first-child {
+			background: $darkGrey;
 	}
 }
 .theme_manage_people .dashboard {
-	h2 {
-		background: $fadedBlue;
+	h2 .icon:first-child {
+			background: $darkBlue;
 	}
 }
 .theme_manage_entity .dashboard {
-	h2 {
-		background: $fadedGreen;
+	h2 .icon:first-child {
+			background: $darkGreen;
 	}
 }

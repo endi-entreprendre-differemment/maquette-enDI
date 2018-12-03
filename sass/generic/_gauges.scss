@@ -93,6 +93,7 @@ progress:not([value])::-webkit-progress-value {
 	}
 	progress:not(.positive) ~ .value_info {
 		&.target {
+			border-right: 1px solid $fadedGrey;
 			padding-right: 8px;
 			width: 100%;
 			svg {
@@ -102,13 +103,14 @@ progress:not([value])::-webkit-progress-value {
 	}
 	progress.positive ~ .value_info {
 		&.target {
+			border-left: 1px solid $fadedGrey;
 			padding-left: 8px;
 			position: absolute;
 			right: 0;
 			top: 32px;
 			text-align: left;
 			svg {
-				left: -4px;
+				left: -5px;
 				top: 0;
 			}
 		}

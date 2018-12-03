@@ -183,18 +183,20 @@ progress:not([value])::-webkit-progress-value {
       top: 32px;
       width: 8px; }
   .progress_indicator progress:not(.positive) ~ .value_info.target {
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
     padding-right: 8px;
     width: 100%; }
     .progress_indicator progress:not(.positive) ~ .value_info.target svg {
       right: -4px; }
   .progress_indicator progress.positive ~ .value_info.target {
+    border-left: 1px solid rgba(128, 128, 128, 0.2);
     padding-left: 8px;
     position: absolute;
     right: 0;
     top: 32px;
     text-align: left; }
     .progress_indicator progress.positive ~ .value_info.target svg {
-      left: -4px;
+      left: -5px;
       top: 0; }
 
 .main_header {
@@ -647,7 +649,7 @@ table .colText {
 table .colActions {
   text-align: right; }
 table .colState {
-  text-align: left;
+  text-align: center;
   white-space: nowrap; }
 table .colNumber {
   text-align: right; }
@@ -767,15 +769,22 @@ h6 {
       display: flex;
       justify-content: center; }
   .dashboard h2 {
-    padding: 10px 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
     position: relative; }
-    .dashboard h2 .icon:first-child svg {
-      height: 24px;
-      margin: 0 5px;
-      vertical-align: text-bottom;
-      width: 24px; }
+    .dashboard h2 .icon:first-child {
+      height: 2.5em;
+      display: inline-block;
+      margin-right: 5px;
+      vertical-align: -.8em;
+      width: 2.5em; }
+      .dashboard h2 .icon:first-child svg {
+        display: block;
+        fill: white;
+        height: 1.5em;
+        margin: .5em;
+        width: 1.5em; }
     .dashboard h2 .icon.close {
-      right: 10px;
+      right: 0;
       position: absolute; }
   .dashboard h3 {
     margin: 20px 10px 0; }
@@ -807,14 +816,14 @@ h6 {
 @media (max-width: 1024px) {
   .dashboard .dash_elem {
     width: calc( 100% - 20px); } }
-.theme_default .dashboard h2 {
-  background: rgba(128, 128, 128, 0.2); }
+.theme_default .dashboard h2 .icon:first-child {
+  background: #757575; }
 
-.theme_manage_people .dashboard h2 {
-  background: rgba(0, 122, 177, 0.2); }
+.theme_manage_people .dashboard h2 .icon:first-child {
+  background: #005c98; }
 
-.theme_manage_entity .dashboard h2 {
-  background: rgba(0, 137, 81, 0.2); }
+.theme_manage_entity .dashboard h2 .icon:first-child {
+  background: #066243; }
 
 body.login .layout {
   height: 100vh; }
