@@ -48,12 +48,41 @@
 	ul {
 		list-style-type: none;
 		padding: $unitPadding*2;
-		li {
-			border-bottom: 1px solid $veryFadedGrey;
-			padding-bottom: $unitPadding*2;
+		&.events {
+			li {
+				border-bottom: 1px solid $veryFadedGrey;
+				padding-bottom: $unitPadding*2;
+			}
+			h3 {
+				margin: $unitPadding*2 0 $unitPadding;
+			}
 		}
-		h3 {
-			margin: $unitPadding*2 0 $unitPadding;
+		&.favourites {
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			a {
+				background: $lightGreen;
+				color: $black;
+				display: block;
+				height: 160px;
+				margin: 16px;
+				text-align: center;
+				text-decoration: none;
+				width: 160px;
+				svg {
+					height: 64px;
+					fill: $black;
+					margin: 24px 32px 24px;
+					width: 64px;
+				}
+				&:hover,
+				&:focus,
+				&:active {
+					box-shadow: 0 2px 4px $midGrey;
+				}
+			}
 		}
 	}
 	.search_form {

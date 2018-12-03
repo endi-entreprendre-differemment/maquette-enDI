@@ -793,11 +793,32 @@ h6 {
   .dashboard ul {
     list-style-type: none;
     padding: 10px; }
-    .dashboard ul li {
+    .dashboard ul.events li {
       border-bottom: 1px solid rgba(128, 128, 128, 0.1);
       padding-bottom: 10px; }
-    .dashboard ul h3 {
+    .dashboard ul.events h3 {
       margin: 10px 0 5px; }
+    .dashboard ul.favourites {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .dashboard ul.favourites a {
+        background: #1de67e;
+        color: black;
+        display: block;
+        height: 160px;
+        margin: 16px;
+        text-align: center;
+        text-decoration: none;
+        width: 160px; }
+        .dashboard ul.favourites a svg {
+          height: 64px;
+          fill: black;
+          margin: 24px 32px 24px;
+          width: 64px; }
+        .dashboard ul.favourites a:hover, .dashboard ul.favourites a:focus, .dashboard ul.favourites a:active {
+          box-shadow: 0 2px 4px gray; }
   .dashboard .search_form {
     padding: 5px 10px; }
     .dashboard .search_form input:only-of-type {
