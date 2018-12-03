@@ -42,6 +42,14 @@
 					<svg><use href="../resources/icons.svg#edit"></use></svg>
 					<span class="screen-reader-text">modifier votre profil</span>
 				</a>
+				<span class="icon theme people" title="vous gérez une personne">
+					<svg><use href="../resources/icons.svg#user-full"></use></svg>
+					<span class="screen-reader-text">vous gérez une personne</span>
+				</span>
+				<span class="icon theme entity" title="vous gérez une entité">
+					<svg><use href="../resources/icons.svg#entity"></use></svg>
+					<span class="screen-reader-text">vous gérez une enseigne</span>
+				</span>
 			</header>
 			<nav id="target_menu" role="navigation">
 				<ul>
@@ -394,6 +402,42 @@
 										</tr>
 									</tbody>
 								</table>
+							</div>
+							<div class="dash_elem">
+								<h2>
+									<span class="icon">
+										<svg><use href="../resources/icons.svg#stats"></use></svg>
+									</span>
+									Vos indicateurs
+									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
+										<svg><use href="../resources/icons.svg#cross"></use></svg>
+										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
+									</a>
+								</h2>
+								<h3>Chiffre d’affaires</h3>
+								<div class="progress_indicator">
+									<progress min="0" max="100" value="75" class="caution" title="75% de votre objectif réalisé">
+									</progress>
+									<span class="value_info current" style="width:75%;">
+										<span class="screen-reader-text">75% réalisé : </span>5400 €
+									</span>
+									<span class="value_info target" style="left:100%;">
+										<span class="screen-reader-text">votre objectif : </span>7200 €
+										<svg><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
+									</span>
+								</div>
+								<h3>Devis</h3>
+								<div class="progress_indicator">
+									<progress min="0" max="100" value="100" class="positive" title="120% de votre objectif réalisé">
+									</progress>
+									<span class="value_info current" style="width:100%;">
+										<span class="screen-reader-text">120% réalisé : </span>42
+									</span>
+									<span class="value_info target" style="left:83.33%;">
+										<span class="screen-reader-text">votre objectif : </span>35
+										<svg><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
+									</span>
+								</div>
 							</div>
 							<div class="dash_elem">
 								<h2>

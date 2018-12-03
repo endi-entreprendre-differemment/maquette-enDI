@@ -58,6 +58,9 @@
 			margin-left: $unitPadding;
 		}
 	}
+	.progress_indicator {
+		margin: 0 $unitPadding*2;
+	}
 	table {
 		margin: $unitPadding*2 $unitPadding;
 		width: calc( 100% - 10px );

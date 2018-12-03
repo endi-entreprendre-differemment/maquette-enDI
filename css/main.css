@@ -96,6 +96,107 @@ button svg:last-child {
 button.icon.only svg {
   margin: 0; }
 
+progress {
+  background: rgba(128, 128, 128, 0.1);
+  border: 0 none;
+  color: #757575;
+  display: block;
+  height: 16px;
+  width: 100%; }
+
+progress:not([value]) {
+  animation: move 2s linear infinite;
+  background-image: linear-gradient(-45deg, rgba(128, 128, 128, 0.5) 25%, #b0b0b0 25%, #b0b0b0 50%, rgba(128, 128, 128, 0.5) 50%, rgba(128, 128, 128, 0.5) 75%, #b0b0b0 75%, #b0b0b0 100%);
+  background-size: 24px 24px;
+  color: rgba(128, 128, 128, 0.5); }
+
+progress::-moz-progress-bar {
+  background: #757575; }
+
+progress.target::-moz-progress-bar {
+  background: rgba(128, 128, 128, 0.8); }
+
+progress.positive::-moz-progress-bar {
+  background: #008951; }
+
+progress.negative::-moz-progress-bar {
+  background: #e11400; }
+
+progress.caution::-moz-progress-bar {
+  background: #ff9600; }
+
+progress:not([value])::-moz-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  background: #757575; }
+
+progress.target::-webkit-progress-value {
+  background: rgba(128, 128, 128, 0.8); }
+
+progress.error::-webkit-progress-value {
+  background: transparent; }
+
+progress.positive::-webkit-progress-value {
+  background: #008951; }
+
+progress.negative::-webkit-progress-value {
+  background: #e11400; }
+
+progress.caution::-webkit-progress-value {
+  background: #ff9600; }
+
+progress:not([value])::-webkit-progress-value {
+  background: transparent; }
+
+@keyframes move {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 24px 24px; } }
+.progress_indicator {
+  padding: 16px 0;
+  position: relative; }
+  .progress_indicator .value_info {
+    display: block;
+    line-height: 16px;
+    white-space: nowrap; }
+    .progress_indicator .value_info.current {
+      font-size: 14px;
+      font-size: .875rem;
+      font-weight: bold;
+      left: 0;
+      padding: 0 2px;
+      position: absolute;
+      text-align: right;
+      top: 0; }
+    .progress_indicator .value_info.target {
+      font-size: 12px;
+      font-size: .75rem;
+      text-align: right; }
+    .progress_indicator .value_info svg {
+      height: 8px;
+      position: absolute;
+      top: 32px;
+      width: 8px; }
+  .progress_indicator progress:not(.positive) ~ .value_info.target {
+    padding-right: 8px;
+    width: 100%; }
+    .progress_indicator progress:not(.positive) ~ .value_info.target svg {
+      right: -4px; }
+  .progress_indicator progress.positive ~ .value_info.target {
+    padding-left: 8px;
+    position: absolute;
+    right: 0;
+    top: 32px;
+    text-align: left; }
+    .progress_indicator progress.positive ~ .value_info.target svg {
+      left: -4px;
+      top: 0; }
+
 .main_header {
   background: #757575;
   color: white;
@@ -695,6 +796,8 @@ h6 {
     .dashboard .search_form button {
       flex: 0 0 auto;
       margin-left: 5px; }
+  .dashboard .progress_indicator {
+    margin: 0 10px; }
   .dashboard table {
     margin: 10px 5px;
     width: calc( 100% - 10px ); }

@@ -1,0 +1,116 @@
+progress {
+	background: $veryFadedGrey;
+	border: 0 none;
+	color: $darkGrey;
+	display: block;
+	height: 16px;
+	width: 100%;
+}
+progress:not([value]) {
+	animation: move 2s linear infinite;
+	background-image: linear-gradient(-45deg, $midFadedGrey 25%, $lightGrey 25%, $lightGrey 50%, $midFadedGrey 50%, $midFadedGrey 75%, $lightGrey 75%, $lightGrey 100% );
+	background-size: 24px 24px;
+	color: $midFadedGrey;
+}
+progress::-moz-progress-bar {
+	background: $darkGrey;
+}
+progress.target::-moz-progress-bar {
+	background: $transGrey;
+}
+progress.positive::-moz-progress-bar {
+	background: $funcPositive;
+}
+progress.negative::-moz-progress-bar {
+	background: $funcNegative;
+}
+progress.caution::-moz-progress-bar {
+	background: $funcCaution;
+}
+progress:not([value])::-moz-progress-bar {
+	background: transparent;
+}
+progress::-webkit-progress-bar {
+	background: transparent;
+}
+progress::-webkit-progress-value {
+	background: $darkGrey;
+}
+progress.target::-webkit-progress-value {
+	background: $transGrey;
+}
+progress.error::-webkit-progress-value {
+	background: transparent;
+}
+progress.positive::-webkit-progress-value {
+	background: $funcPositive;
+}
+progress.negative::-webkit-progress-value {
+	background: $funcNegative;
+}
+progress.caution::-webkit-progress-value {
+	background: $funcCaution;
+}
+progress:not([value])::-webkit-progress-value {
+	background: transparent;
+}
+@keyframes move {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 24px 24px;
+	}
+}
+.progress_indicator {
+	padding: 16px 0;
+	position: relative;
+	.value_info {
+		display: block;
+		line-height: 16px;
+		white-space: nowrap;
+		&.current {
+			font-size: 14px;
+			font-size: .875rem;
+			font-weight: bold;
+			left: 0;
+			padding: 0 2px;
+			position: absolute;
+			text-align: right;
+			top: 0;			
+		}
+		&.target {
+			font-size: 12px;
+			font-size: .75rem;
+			text-align: right;
+		}
+		svg {
+			height: 8px;
+			position: absolute;
+			top: 32px;
+			width: 8px;
+		}
+	}
+	progress:not(.positive) ~ .value_info {
+		&.target {
+			padding-right: 8px;
+			width: 100%;
+			svg {
+				right: -4px;
+			}
+		}
+	}
+	progress.positive ~ .value_info {
+		&.target {
+			padding-left: 8px;
+			position: absolute;
+			right: 0;
+			top: 32px;
+			text-align: left;
+			svg {
+				left: -4px;
+				top: 0;
+			}
+		}
+	}
+}
