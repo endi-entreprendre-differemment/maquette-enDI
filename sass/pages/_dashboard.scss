@@ -13,7 +13,6 @@
 		&.empty {
 			align-items: center;
 			border: 1px dashed $fadedGrey;
-			display: flex;
 			justify-content: center;
 		}
 	}
@@ -40,7 +39,7 @@
 		}
 	}
 	h3 {
-		margin: $unitPadding*4 $unitPadding*2 0;
+		margin: $unitPadding*2 $unitPadding*2 0;
 		+ table {
 			margin-top: 0;
 		}
@@ -59,7 +58,6 @@
 		}
 		&.favourites {
 			align-items: center;
-			display: flex;
 			flex-wrap: wrap;
 			font-size: 14px;
 			font-size: .875rem;
@@ -69,7 +67,7 @@
 				color: $black;
 				display: block;
 				height: 144px;
-				margin: 16px;
+				margin: 5px;
 				text-align: center;
 				text-decoration: none;
 				width: 144px;
@@ -119,6 +117,15 @@
 	}
 	.progress_indicator {
 		margin: 0 $unitPadding*2;
+	}
+	.calendar_top {
+		padding: $unitPadding $unitPadding*2;
+		div {
+			width: 50%;
+			&:last-child {
+				text-align: right;
+			}
+		}
 	}
 	table {
 		margin: $unitPadding*2 $unitPadding;

@@ -1,4 +1,4 @@
-div.layout {
+.layout {
 	&.flex {
 		display: flex;
 	}
@@ -11,23 +11,23 @@ div.layout {
 		}
 	}
 }
-div.base_layout {
+.base_layout {
 	height: 100vh;
 	overflow: hidden;
 	width: 100vw;
 }
-div.base_content {
+.base_content {
 	flex: 1 0 auto;
 	flex-direction: column;
 	height: 100vh;
 	overflow: hidden;
 }
-div.main_area {
+.main_area {
 	flex: 1 0 auto;
 	overflow: auto;
 }
-@media (max-width: 800px) {
-	div.layout {
+@media (max-width: 1024px) {
+	.layout {
 		&.flex {
 			flex-wrap: wrap;
 		}
@@ -37,5 +37,9 @@ div.main_area {
 				width: 100%;
 			}
 		}
+	}
+	.base_content {
+		min-height: 100vh;
+		height: auto;
 	}
 }

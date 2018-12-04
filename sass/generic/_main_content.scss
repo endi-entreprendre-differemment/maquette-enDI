@@ -39,7 +39,8 @@
 	}
 }
 @media (max-width: 1024px) {
-	.main_area {
+	.main_area,
+	.base_content {
 		width: calc( 100vw - 42px );
 	}
 }
