@@ -73,3 +73,13 @@ button {
 		}
 	}
 }
+.search_form {
+	input:only-of-type {
+		flex: 1 0 auto;
+		margin-right: $unitPadding;
+	}
+	button {
+		flex: 0 0 auto;
+	}
+}
+

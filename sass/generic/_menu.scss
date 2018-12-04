@@ -53,11 +53,14 @@
 			margin-right: 5px;
 			vertical-align: middle;
 			width: 48px;
+			img,
 			svg {
-				fill: $white;
 				height: 48px;
 				clip-path: circle( 24px at center );
 				width: 48px;
+			}
+			svg {
+				fill: $white;
 			}
 		}
 		a {

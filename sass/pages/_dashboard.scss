@@ -107,13 +107,6 @@
 	}
 	.search_form {
 		padding: $unitPadding $unitPadding*2;
-		input:only-of-type {
-			flex: 1 0 auto;
-		}
-		button {
-			flex: 0 0 auto;
-			margin-left: $unitPadding;
-		}
 	}
 	.progress_indicator {
 		margin: 0 $unitPadding*2;

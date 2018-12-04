@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title>Choix d’une enseigne – enDI</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+	<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen,projection,print">
+</head>
+<body class="theme_default">
+	<div class="base_layout layout flex screen">
+		<div id="demo_base_menu" class="base_menu flex">
+			<p class="access_tools" role="navigation" aria-label="page">
+				<a href="#target_content">aller au contenu</a>
+				<a href="#target_menu">au menu</a>
+			</p>
+			<ul class="menu_tools">
+				<li class="menu">
+					<a href="javascript:void(0);" onclick="toggleOpen('demo_base_menu');" title="afficher le menu" class="icon">
+						<svg><use href="../resources/icons.svg#menu" xlink:href="../resources/icons.svg#menu"></use></svg>
+						<span class="screen-reader-text">afficher le menu</span>
+					</a>
+				</li>
+				<li class="menu_size mini">
+					<a href="javascript:void(0);" onclick="resize('menu');" title="minimiser le menu" class="icon">
+						<svg><use href="../resources/icons.svg#arrow-triangle-left" xlink:href="../resources/icons.svg#arrow-triangle-left"></use></svg>
+						<span class="screen-reader-text">minimiser le menu</span>
+					</a>
+				</li>
+				<li class="menu_size maxi">
+					<a href="javascript:void(0);" onclick="resize('menu');" title="maximiser le menu" class="icon menu_size">
+						<svg><use href="../resources/icons.svg#arrow-triangle-right" xlink:href="../resources/icons.svg#arrow-triangle-right"></use></svg>
+						<span class="screen-reader-text">maximiser le menu</span>
+					</a>
+				</li>
+			</ul>
+			<header>
+				<span class="user_avatar">
+					<img width="256" height="256" alt="Jaim Berthoud" src="../resources/photos/user4.jpg">
+				</span> 
+				<a href="javascript:void(0);" title="modifier votre profil" class="icon edit">
+					J. Berthoud
+					<svg><use href="../resources/icons.svg#edit" xlink:href="../resources/icons.svg#edit"></use></svg>
+					<span class="screen-reader-text">modifier votre profil</span>
+				</a>
+				<span class="icon theme people" title="vous gérez une personne">
+					<svg><use href="../resources/icons.svg#user-full" xlink:href="../resources/icons.svg#user-full"></use></svg>
+					<span class="screen-reader-text">vous gérez une personne</span>
+				</span>
+				<span class="icon theme entity" title="vous gérez une entité">
+					<svg><use href="../resources/icons.svg#entity" xlink:href="../resources/icons.svg#entity"></use></svg>
+					<span class="screen-reader-text">vous gérez une enseigne</span>
+				</span>
+			</header>
+			<nav id="target_menu" role="navigation">
+				<ul>
+					<li class="current_item"><a href="javascript:void(0);">Accueil</a></li>
+				</ul>
+			</nav>
+			<footer>
+				<img width="94" height="26" alt="Logo enDI - entreprendre DIFFÉREMMENT" title="entreprendre DIFFÉREMMENT" src="../resources/endi_logo-noir.svg"><br>
+				v 1.0
+			</footer>
+		</div>
+		<div class="base_content layout flex">
+			<header id="demo_main_header" class="main_header" role="banner">
+				<div class="header_content layout flex">
+					<div>
+						<p class="breadcrumbs">
+							enDI > Choix d’une enseigne
+						</p>
+						<h1>
+							Choix d’une enseigne
+						</h1>
+					</div>
+					<ul class="layout flex tools">
+						<li>
+							<a href="javascript:void(0);" onclick="showNotifs();" title="pas de notification" class="icon">
+								<svg><use href="../resources/icons.svg#bell" xlink:href="../resources/icons.svg#bell"></use></svg>
+								<span class="screen-reader-text">pas de notification</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<div class="main_area">
+				<main id="target_content" class="" role="main">
+					<div class="main_content">
+						<p class="message">
+							Bonjour Jaim Berthoud, bienvenue dans votre espace personnel.<br>
+							Choisissez une enseigne.
+						</p>
+						<div class="entities_choice">
+							<form>
+								<div class="layout flex search_form">
+									<label for="cal_search" class="screen-reader-text">Rechercher par nom</label>
+									<input type="text" id="cal_search" placeholder="nom" title="Rechercher par nom">
+									<button type="submit" class="icon only" title="Rechercher">
+										<svg><use href="../resources/icons.svg#search" xlink:href="../resources/icons.svg#search"></use></svg>
+										<span class="screen-reader-text">Rechercher</span>
+									</button>
+								</div>
+							</form>
+							<ul class="layout flex">
+								<li>
+									<a href="javascript:void(0);" title="Accéder à la gestion de l’entité Allain">
+										<h2><span class="screen-reader-text">Accéder à la gestion de l’entité </span>Allain</h2>
+										<p>
+											Vestibulum semper arcu a commodo sodales.
+										</p>										
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" title="Accéder à la gestion de l’entité Delattre S.A.S.">
+										<h2><span class="screen-reader-text">Accéder à la gestion de l’entité </span>Delattre S.A.S.</h2>
+										<p>
+											Nam pellentesque pulvinar rhoncus.
+										</p>										
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</main>
+<!-- 
+				<div class="context_help" role="complementary">
+					Aide contextuelle (optionnel)
+				</div>
+ -->
+			</div>
+		</div>
+	</div>
+	<div id="notifications" class="notifications">
+		<h2 class="screen-reader-text">Notifications</h2>
+		<ul>
+			<li class="success">
+				<span class="icon">
+					<svg><use href="../resources/icons.svg#check" xlink:href="../resources/icons.svg#check"></use></svg>
+				</span>
+				<span class="text">La facture EP001-190401 a été validée.</span>
+				<a href="javascript:void(0);" title="Fermer cette notification" onclick="toggleOpen( this.parentNode );" class="icon close">
+					<svg><use href="../resources/icons.svg#cross" xlink:href="../resources/icons.svg#cross"></use></svg>
+					<span class="screen-reader-text">Fermer cette notification</span>
+				</a>
+			</li>
+			<li class="neutral">
+				<span class="icon">
+					<svg><use href="../resources/icons.svg#clock" xlink:href="../resources/icons.svg#clock"></use></svg>
+				</span>
+				<span class="text">Vous avez rendez-vous avec Cécile Legrand demain.</span>
+				<a href="javascript:void(0);" title="Fermer cette notification" onclick="toggleOpen( this.parentNode );" class="icon close">
+					<svg><use href="../resources/icons.svg#cross" xlink:href="../resources/icons.svg#cross"></use></svg>
+					<span class="screen-reader-text">Fermer cette notification</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+<script src="../js/demoScript.js"></script>
+
+</body>
+</html>

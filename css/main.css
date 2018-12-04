@@ -96,6 +96,12 @@ button svg:last-child {
 button.icon.only svg {
   margin: 0; }
 
+.search_form input:only-of-type {
+  flex: 1 0 auto;
+  margin-right: 5px; }
+.search_form button {
+  flex: 0 0 auto; }
+
 progress {
   background: rgba(128, 128, 128, 0.1);
   border: 0 none;
@@ -435,11 +441,13 @@ body.help_mini .help_content {
       margin-right: 5px;
       vertical-align: middle;
       width: 48px; }
+      .base_menu header .user_avatar img,
       .base_menu header .user_avatar svg {
-        fill: white;
         height: 48px;
         clip-path: circle(24px at center);
         width: 48px; }
+      .base_menu header .user_avatar svg {
+        fill: white; }
     .base_menu header a {
       color: black;
       text-decoration: none; }
@@ -844,11 +852,6 @@ h6 {
       font-size: .725rem; }
   .dashboard .search_form {
     padding: 5px 10px; }
-    .dashboard .search_form input:only-of-type {
-      flex: 1 0 auto; }
-    .dashboard .search_form button {
-      flex: 0 0 auto;
-      margin-left: 5px; }
   .dashboard .progress_indicator {
     margin: 0 10px; }
   .dashboard .calendar_top {
@@ -875,6 +878,37 @@ h6 {
 .theme_manage_entity .dashboard h2 .icon:first-child {
   background: #066243; }
 
+.entities_choice {
+  padding: 20px 0; }
+  .entities_choice ul {
+    list-style-type: none;
+    padding: 20px 0; }
+  .entities_choice li {
+    margin: 0 10px 10px 0;
+    min-width: 200px;
+    width: calc( 33.3333% - 10px ); }
+  .entities_choice li a {
+    background: #1de67e;
+    color: black;
+    display: block;
+    height: 100%;
+    padding: 10px;
+    text-decoration: none; }
+    .entities_choice li a h2 {
+      margin-bottom: 5px; }
+    .entities_choice li a p {
+      font-size: 14px;
+      font-size: .875rem; }
+    .entities_choice li a:hover, .entities_choice li a:focus, .entities_choice li a:active {
+      box-shadow: 0 2px 4px gray; }
+  .entities_choice .search_form {
+    min-width: 200px;
+    width: calc( 33.3333% - 10px ); }
+
+@media (max-width: 1024px) {
+  .entities_choice li,
+  .entities_choice .search_form {
+    width: calc( 50% - 10px ); } }
 body.login .layout {
   height: 100vh; }
 body.login .login_form {
