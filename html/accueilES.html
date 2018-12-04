@@ -102,7 +102,7 @@
 							Bonjour Élise Peret, bienvenue dans votre espace personnel.
 						</p>
 						<div class="layout flex dashboard">
-							<div class="dash_elem">
+							<div class="dash_elem"><!--  favoris -->
 								<h2>
 									<span class="icon">
 										<svg><use href="../resources/icons.svg#star-full"></use></svg>
@@ -140,7 +140,184 @@
 									</li>
 								</ul>
 							</div>
-							<div class="dash_elem">
+							<div class="dash_elem"><!--  indicateurs -->
+								<h2>
+									<span class="icon">
+										<svg><use href="../resources/icons.svg#stats"></use></svg>
+									</span>
+									Vos indicateurs
+									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
+										<svg><use href="../resources/icons.svg#cross"></use></svg>
+										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
+									</a>
+								</h2>
+								<h3>Chiffre d’affaires</h3>
+								<div class="progress_indicator">
+									<progress min="0" max="100" value="75" class="caution" title="75% de votre objectif réalisé">
+									</progress>
+									<span class="value_info current" style="width:75%;">
+										<span class="screen-reader-text">75% réalisé : </span>5400 €
+									</span>
+									<span class="value_info target" style="left:100%;">
+										<span class="screen-reader-text">votre objectif : </span>7200 €
+										<svg><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
+									</span>
+								</div>
+								<h3>Devis</h3>
+								<div class="progress_indicator">
+									<progress min="0" max="100" value="100" class="positive" title="120% de votre objectif réalisé">
+									</progress>
+									<span class="value_info current" style="width:100%;">
+										<span class="screen-reader-text">120% réalisé : </span>42
+									</span>
+									<span class="value_info target" style="left:83.33%;">
+										<span class="screen-reader-text">votre objectif : </span>35
+										<svg><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
+									</span>
+								</div>
+<!-- 
+								<h3>Factures</h3>
+								<div class="progress_indicator">
+									<progress min="0" max="100" value="5" class="negative" title="5% de votre objectif réalisé">
+									</progress>
+									<span class="value_info current" style="width:5%;">
+										<span class="screen-reader-text">5% réalisé : </span>400 €
+									</span>
+									<span class="value_info target" style="left:100%;">
+										<span class="screen-reader-text">votre objectif : </span>8000 €
+										<svg><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
+									</span>
+								</div>
+ -->
+							</div>
+							<div class="dash_elem"><!--  calendrier -->
+								<h2>
+									<span class="icon">
+										<svg><use href="../resources/icons.svg#calendar"></use></svg>
+									</span>
+									Calendrier
+									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
+										<svg><use href="../resources/icons.svg#cross"></use></svg>
+										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
+									</a>
+								</h2>
+								<form>
+									<div class="layout flex search_form">
+										<label for="cal_search" class="screen-reader-text">Rechercher par titre, nom d’accompagnant ou type d’événement</label>
+										<input type="text" id="cal_search" placeholder="titre, nom, type" title="Rechercher par titre, nom d’accompagnant ou type d’événement">
+										<button type="submit" class="icon only" title="Rechercher">
+											<svg><use href="../resources/icons.svg#search"></use></svg>
+											<span class="screen-reader-text">Rechercher</span>
+										</button>
+									</div>
+								</form>
+								<table>
+									<thead>
+										<tr>
+											<th scope="col" class="colDate screen-reader-text">Date</th>											
+											<th scope="col" class="colText screen-reader-text">Intitulé</th>
+											<th scope="col" class="colState screen-reader-text">État</th>
+											<th scope="col" class="colActions screen-reader-text">Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr title="Fermeture de décembre">
+											<td class="colDate">
+												24/12/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Fermeture du 24 décembre au 2 janvier</a></td>
+											<td class="colState">
+												<span class="icon state"><svg><use href="../resources/icons.svg#info"></use></svg></span>
+												<span class="screen-reader-text">Fermeture de décembre</span>
+											</td>
+											<td class="colActions">
+											</td>
+										</tr>
+										<tr title="Date limite pour la remise des notes de dépense de novembre">
+											<td class="colDate">
+												10/12/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Remise des notes de dépense de novembre</a></td>
+											<td class="colState">
+												<span class="icon state caution"><svg><use href="../resources/icons.svg#info"></use></svg></span>
+												<span class="screen-reader-text">Date limite pour la remise des notes de dépense de novembre</span>
+											</td>
+											<td class="colActions">
+												<button class="icon only" title="Ajouter une note de dépense">
+													<span class="screen-reader-text">Ajouter une note de dépense</span>
+													<svg><use href="../resources/icons.svg#plus"></use></svg>
+												</button>
+											</td>
+										</tr>
+										<tr title="Formation - Recommandée par Cécile Legrand">
+											<td class="colDate">
+												05/12/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Formation Associé SCIC</a></td>
+											<td class="colState">
+												<span class="icon state"><svg><use href="../resources/icons.svg#star-full"></use></svg></span>
+												<span class="screen-reader-text">Formation - Recommandée par Cécile Legrand</span>
+											</td>
+											<td class="colActions">
+												<button class="icon only" title="S’inscrire à cette événement">
+													<span class="screen-reader-text">S’inscrire à cette événement</span>
+													<svg><use href="../resources/icons.svg#calendar"></use></svg>
+												</button>
+											</td>
+										</tr>
+										<tr title="Rendez-vous - Programmé">
+											<td class="colDate">
+												29/11/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Rendez-vous avec Cécile Legrand</a></td>
+											<td class="colState">
+												<span class="icon state valid"><svg><use href="../resources/icons.svg#clock"></use></svg></span>
+												<span class="screen-reader-text">Rendez-vous - Programmé</span>
+											</td>
+											<td class="colActions">
+												<button class="icon only" title="Voir cet événement">
+													<span class="screen-reader-text">Voir cet événement</span>
+													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
+												</button>
+											</td>
+										</tr>
+										<tr title="Atelier - Terminé">
+											<td class="colDate">
+												16/11/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Atelier clôture des comptes</a></td>
+											<td class="colState">
+												<span class="icon state done"><svg><use href="../resources/icons.svg#check"></use></svg></span>
+												<span class="screen-reader-text">Atelier - Terminé</span>
+											</td>
+											<td class="colActions">
+											</td>
+										</tr>
+										<tr title="Atelier - Reporté">
+											<td class="colDate">
+												28/10/2018
+											</td>
+											<td class="colText"><a href="javascript:void(0);">Atelier clôture des comptes</a></td>
+											<td class="colState">
+												<span class="icon state invalid"><svg><use href="../resources/icons.svg#cross"></use></svg></span>
+												<span class="screen-reader-text">Atelier - Reporté</span>
+											</td>
+											<td class="colActions">
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="4" class="colActions">
+												<button>
+													Voir les événements précédents
+												</button>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<div class="dash_elem"><!--  documents -->
 								<h2>
 									<span class="icon">
 										<svg><use href="../resources/icons.svg#file-text"></use></svg>
@@ -278,134 +455,7 @@
  -->
 								</table>
 							</div>
-							<div class="dash_elem">
-								<h2>
-									<span class="icon">
-										<svg><use href="../resources/icons.svg#calendar"></use></svg>
-									</span>
-									Calendrier
-									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
-										<svg><use href="../resources/icons.svg#cross"></use></svg>
-										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
-									</a>
-								</h2>
-								<form>
-									<div class="layout flex search_form">
-										<label for="cal_search" class="screen-reader-text">Rechercher par titre, nom d’accompagnant ou type d’événement</label>
-										<input type="text" id="cal_search" placeholder="titre, nom, type" title="Rechercher par titre, nom d’accompagnant ou type d’événement">
-										<button type="submit" class="icon only" title="Rechercher">
-											<svg><use href="../resources/icons.svg#search"></use></svg>
-											<span class="screen-reader-text">Rechercher</span>
-										</button>
-									</div>
-								</form>
-								<table>
-									<thead>
-										<tr>
-											<th scope="col" class="colDate screen-reader-text">Date</th>											
-											<th scope="col" class="colText screen-reader-text">Intitulé</th>
-											<th scope="col" class="colState screen-reader-text">État</th>
-											<th scope="col" class="colActions screen-reader-text">Actions</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr title="Fermeture de décembre">
-											<td class="colDate">
-												24/12/2018
-											</td>
-											<td class="colText"><a href="javascript:void(0);">Fermeture du 24 décembre au 2 janvier</a></td>
-											<td class="colState">
-												<span class="icon state"><svg><use href="../resources/icons.svg#info"></use></svg></span>
-												<span class="screen-reader-text">Fermeture de décembre</span>
-											</td>
-											<td class="colActions">
-											</td>
-										</tr>
-										<tr title="Date limite pour la remise des notes de dépense de novembre">
-											<td class="colDate">
-												10/12/2018
-											</td>
-											<td class="colText"><a href="javascript:void(0);">Remise des notes de dépense de novembre</a></td>
-											<td class="colState">
-												<span class="icon state caution"><svg><use href="../resources/icons.svg#info"></use></svg></span>
-												<span class="screen-reader-text">Date limite pour la remise des notes de dépense de novembre</span>
-											</td>
-											<td class="colActions">
-												<button class="icon only" title="Ajouter une note de dépense">
-													<span class="screen-reader-text">Ajouter une note de dépense</span>
-													<svg><use href="../resources/icons.svg#plus"></use></svg>
-												</button>
-											</td>
-										</tr>
-										<tr title="Formation - Recommandée par Cécile Legrand">
-											<td class="colDate">
-												05/12/2018
-											</td>
-											<td class="colText"><a href="javascript:void(0);">Formation Associé SCIC</a></td>
-											<td class="colState">
-												<span class="icon state"><svg><use href="../resources/icons.svg#star-full"></use></svg></span>
-												<span class="screen-reader-text">Formation - Recommandée par Cécile Legrand</span>
-											</td>
-											<td class="colActions">
-												<button class="icon only" title="S’inscrire à cette événement">
-													<span class="screen-reader-text">S’inscrire à cette événement</span>
-													<svg><use href="../resources/icons.svg#calendar"></use></svg>
-												</button>
-											</td>
-										</tr>
-										<tr title="Rendez-vous - Programmé">
-											<td class="colDate">
-												29/11/2018
-											</td>
-											<td class="colText"><a href="javascript:void(0);">Rendez-vous avec Cécile Legrand</a></td>
-											<td class="colState">
-												<span class="icon state valid"><svg><use href="../resources/icons.svg#clock"></use></svg></span>
-												<span class="screen-reader-text">Rendez-vous - Programmé</span>
-											</td>
-											<td class="colActions">
-												<button class="icon only" title="Voir cet événement">
-													<span class="screen-reader-text">Voir cet événement</span>
-													<svg><use href="../resources/icons.svg#arrow-right"></use></svg>
-												</button>
-											</td>
-										</tr>
-										<tr title="Atelier - Terminé">
-											<td class="colDate">
-												16/11/2018
-											</td>
-											<td class="colText"><a href="javascript:void(0);">Atelier clôture des comptes</a></td>
-											<td class="colState">
-												<span class="icon state done"><svg><use href="../resources/icons.svg#check"></use></svg></span>
-												<span class="screen-reader-text">Atelier - Terminé</span>
-											</td>
-											<td class="colActions">
-											</td>
-										</tr>
-										<tr title="Atelier - Reporté">
-											<td class="colDate">
-												28/10/2018
-											</td>
-											<td class="colText"><a href="javascript:void(0);">Atelier clôture des comptes</a></td>
-											<td class="colState">
-												<span class="icon state invalid"><svg><use href="../resources/icons.svg#cross"></use></svg></span>
-												<span class="screen-reader-text">Atelier - Reporté</span>
-											</td>
-											<td class="colActions">
-											</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="4" class="colActions">
-												<button>
-													Voir les événements précédents
-												</button>
-											</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-							<div class="dash_elem">
+							<div class="dash_elem"><!--  transactions -->
 								<h2>
 									<span class="icon">
 										<svg><use href="../resources/icons.svg#coin-euro"></use></svg>
@@ -500,60 +550,10 @@
 									</tbody>
 								</table>
 							</div>
-							<div class="dash_elem">
+							<div class="dash_elem"><!--  vie de la CAE -->
 								<h2>
 									<span class="icon">
-										<svg><use href="../resources/icons.svg#stats"></use></svg>
-									</span>
-									Vos indicateurs
-									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
-										<svg><use href="../resources/icons.svg#cross"></use></svg>
-										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
-									</a>
-								</h2>
-								<h3>Chiffre d’affaires</h3>
-								<div class="progress_indicator">
-									<progress min="0" max="100" value="75" class="caution" title="75% de votre objectif réalisé">
-									</progress>
-									<span class="value_info current" style="width:75%;">
-										<span class="screen-reader-text">75% réalisé : </span>5400 €
-									</span>
-									<span class="value_info target" style="left:100%;">
-										<span class="screen-reader-text">votre objectif : </span>7200 €
-										<svg><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
-									</span>
-								</div>
-								<h3>Devis</h3>
-								<div class="progress_indicator">
-									<progress min="0" max="100" value="100" class="positive" title="120% de votre objectif réalisé">
-									</progress>
-									<span class="value_info current" style="width:100%;">
-										<span class="screen-reader-text">120% réalisé : </span>42
-									</span>
-									<span class="value_info target" style="left:83.33%;">
-										<span class="screen-reader-text">votre objectif : </span>35
-										<svg><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
-									</span>
-								</div>
-<!-- 
-								<h3>Factures</h3>
-								<div class="progress_indicator">
-									<progress min="0" max="100" value="5" class="negative" title="5% de votre objectif réalisé">
-									</progress>
-									<span class="value_info current" style="width:5%;">
-										<span class="screen-reader-text">5% réalisé : </span>400 €
-									</span>
-									<span class="value_info target" style="left:100%;">
-										<span class="screen-reader-text">votre objectif : </span>8000 €
-										<svg><use href="../resources/icons.svg#arrow-triangle-up"></use></svg>
-									</span>
-								</div>
- -->
-							</div>
-							<div class="dash_elem">
-								<h2>
-									<span class="icon">
-										<svg><use href="../resources/icons.svg#bubbles"></use></svg>
+										<svg><use href="../resources/icons.svg#news"></use></svg>
 									</span>
 									Vie de la CAE
 									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
@@ -573,6 +573,50 @@
 										<p>
 											Les supports et les photos de la trimestrielle de rentrée sont <a href="javascript:void(0);">disponibles au téléchargement</a>.
 										</p>
+									</li>
+								</ul>
+							</div>
+							<div class="dash_elem"><!--  linkedIn -->
+								<h2>
+									<span class="icon">
+										<svg><use href="../resources/icons.svg#linkedin"></use></svg>
+									</span>
+									Votre mur LinkedIn
+									<a href="javascript:void(0);" title="Ne plus afficher ce panneau" class="icon close">
+										<svg><use href="../resources/icons.svg#cross"></use></svg>
+										<span class="screen-reader-text">Ne plus afficher ce panneau</span>
+									</a>
+								</h2>
+								<ul class="social_wall">
+									<li>
+										<img width="256" height="256" alt="Kevin Martin" src="../resources/photos/user2.jpg">
+										<div>
+											<h5><a href="javascript:void(0);">Proin ut risus sed</a> <time>
+3 décembre 2018 - 16:15</time></h5>
+											<p>
+												Aenean fringilla posuere ligula vitae viverra. Pellentesque non urna a massa dictum fringilla molestie id mauris. Duis dignissim mollis augue a rhoncus. Mauris viverra congue elit pharetra lobortis.
+										</div>
+										</p>
+									</li>
+									<li>
+										<img width="256" height="256" alt="Jean Dupont" src="../resources/photos/user5.jpg">
+										<div>
+											<h5><a href="javascript:void(0);">Nulla accumsan porttitor</a> <time>
+3 décembre 2018 - 11:28</time></h5>
+											<p>
+												Pellentesque non urna a massa dictum fringilla molestie id mauris. Duis dignissim mollis augue a rhoncus. Mauris viverra congue elit pharetra lobortis.
+											</p>
+										</div>
+									</li>
+									<li>
+										<img width="256" height="256" alt="Lisa Legrand" src="../resources/photos/user3.jpg">
+										<div>
+											<h5><a href="javascript:void(0);">Donec varius dictum</a> <time>
+3 décembre 2018 - 08:54</time></h5>
+											<p>
+												Suspendisse ac mauris vel sapien egestas scelerisque ut tempus odio. Donec quis turpis eget purus mollis tempor. Quisque convallis hendrerit ipsum in gravida. Sed dui diam, fringilla sit amet sem sit amet, condimentum condimentum dui.
+											</p>
+										</div>
 									</li>
 								</ul>
 							</div>

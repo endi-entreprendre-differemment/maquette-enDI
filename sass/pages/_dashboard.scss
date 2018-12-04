@@ -86,6 +86,26 @@
 				}
 			}
 		}
+		&.social_wall {
+			li {
+				display: flex;
+				padding-bottom: 10px;
+			}
+			img {
+				flex: 0 0 auto;
+				height: 64px;
+				margin: 0 10px 5px 0;
+				width: 64px;
+			}
+			h5 {
+				margin-top: 0;
+			}
+			time {
+				color: $lightGrey;
+				font-size: 10px;
+				font-size: .725rem;
+			}
+		}
 	}
 	.search_form {
 		padding: $unitPadding $unitPadding*2;
